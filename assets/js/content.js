@@ -7,6 +7,7 @@ window.LINKS = {
   whatsappText: '(22) 99920-8300',
   linkedin: 'https://www.linkedin.com/in/edson-junior-de-oliveira/',
   linkedinText: 'linkedin.com/in/edson-junior-de-oliveira',
+  email: 'edsonjr.oliveira@yahoo.com.br',
   curriculo: 'assets/docs/Curriculo_Edson_Junior_de_Oliveira.pdf',
 };
 
@@ -234,7 +235,7 @@ window.CONTENT = {
     },
     contact: {
       title: 'Vamos conversar',
-      text: 'Estou disponível para oportunidades em Engenharia de Processos, Melhoria Contínua, Excelência Operacional e Coordenação de Operações. Fale comigo pelo WhatsApp ou pelo LinkedIn.',
+      text: 'Estou disponível para oportunidades em Engenharia de Processos, Melhoria Contínua, Excelência Operacional e Coordenação de Operações. Fale comigo pelo WhatsApp, LinkedIn ou E-mail.',
       whats: 'Contato WhatsApp',
       cv: 'Baixar currículo',
       availabilityTitle: 'Disponibilidade',
@@ -467,7 +468,7 @@ window.CONTENT = {
     },
     contact: {
       title: "Let's talk",
-      text: "I'm available for roles in Process Engineering, Continuous Improvement, Operational Excellence and Operations Coordination. Reach me on WhatsApp or LinkedIn.",
+      text: "I'm available for roles in Process Engineering, Continuous Improvement, Operational Excellence and Operations Coordination. Reach me on WhatsApp, LinkedIn or email.",
       whats: 'Contact on WhatsApp',
       cv: 'Download résumé (PT)',
       availabilityTitle: 'Availability',

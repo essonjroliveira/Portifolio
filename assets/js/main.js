@@ -41,6 +41,7 @@
     menu: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>',
     close: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>',
     chevron: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>',
+    mail: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5.5" width="17" height="13" rx="1.5"/><path d="m4 7 8 6 8-6"/></svg>',
     pin: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11Z"/><circle cx="12" cy="10" r="2.3"/></svg>',
   };
 
@@ -267,9 +268,10 @@
         '<div class="contact-actions"><div class="contact-main">' +
           '<a class="btn primary" href="' + LINKS.whatsapp + '"' + ext(c, k.whats + ' ' + LINKS.whatsappText) + '>' + I.chat + esc(k.whats) + '</a>' +
           '<a class="btn ghost" href="' + LINKS.linkedin + '"' + ext(c, 'LinkedIn') + '>' + I.profile + 'LinkedIn</a>' +
+          '<a class="btn ghost" href="mailto:' + LINKS.email + '" aria-label="' + esc('E-mail ' + LINKS.email) + '">' + I.mail + 'E-mail</a>' +
           '<a class="btn ghost" href="' + LINKS.curriculo + '" download>' + I.download + esc(k.cv) + '</a>' +
         '</div></div>' +
-        '<p class="contact-lines"><span>WhatsApp ' + esc(LINKS.whatsappText) + '</span><span>' + esc(LINKS.linkedinText) + '</span></p>' +
+        '<p class="contact-lines"><span>WhatsApp ' + esc(LINKS.whatsappText) + '</span><span>' + esc(LINKS.linkedinText) + '</span><span>' + esc(LINKS.email) + '</span></p>' +
         '<div class="contact-avail"><h3>' + esc(k.availabilityTitle) + '</h3><ul class="chips">' +
           k.availability.map(function (a) { return '<li class="chip">' + esc(a) + '</li>'; }).join('') +
         '</ul><p class="contact-loc">' + I.pin + esc(k.location) + '</p></div>' +
