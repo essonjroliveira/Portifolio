@@ -268,7 +268,6 @@
         '<div class="contact-actions"><div class="contact-main">' +
           '<a class="btn primary" href="' + LINKS.whatsapp + '"' + ext(c, k.whats + ' ' + LINKS.whatsappText) + '>' + I.chat + esc(k.whats) + '</a>' +
           '<a class="btn ghost" href="' + LINKS.linkedin + '"' + ext(c, 'LinkedIn') + '>' + I.profile + 'LinkedIn</a>' +
-          '<a class="btn ghost" href="mailto:' + LINKS.email + '" aria-label="' + esc('E-mail ' + LINKS.email) + '">' + I.mail + 'E-mail</a>' +
           '<a class="btn ghost" href="' + LINKS.curriculo + '" download>' + I.download + esc(k.cv) + '</a>' +
         '</div></div>' +
         '<p class="contact-lines"><span>WhatsApp ' + esc(LINKS.whatsappText) + '</span><span>' + esc(LINKS.linkedinText) + '</span><span>' + esc(LINKS.email) + '</span></p>' +
