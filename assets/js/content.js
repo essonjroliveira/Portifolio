@@ -21,7 +21,7 @@ window.CONTENT = {
     },
     ui: { skip: 'Pular para o conteúdo', more: 'Ver mais', less: 'Ver menos', newTab: '(abre em nova aba)', top: 'Voltar ao topo' },
     hero: {
-      kicker: 'Engenharia de Processos | Melhoria Contínua | Gestão de Operações',
+      kicker: 'Engenharia de Processos | Melhoria Contínua | Excelência Operacional',
       title: 'Do chão de fábrica à melhoria contínua.',
       intro: 'Sou Edson Junior de Oliveira, Engenheiro de Produção com mais de 11 anos na fabricação de tubos flexíveis para Óleo & Gás. Fui da operação de máquinas à liderança de equipes e aplico Lean, SMED e Trabalho Padronizado para reduzir setup, tempo de ciclo e desperdício.',
       ctaCv: 'Baixar currículo',
@@ -32,7 +32,7 @@ window.CONTENT = {
       highlights: [
         { title: 'Engenharia de processos', text: 'SMED, Trabalho Padronizado, VSM e balanceamento de linha' },
         { title: 'Melhoria contínua', text: 'Lean, Kaizen, PDCA, análise de causa raiz e Six Sigma Green Belt' },
-        { title: 'Gestão de operações', text: 'Liderança de equipes e metas diárias de produção, segurança e qualidade' },
+        { title: 'Excelência operacional', text: 'Liderança de equipes e metas diárias de produção, segurança e qualidade' },
       ],
     },
     about: {
@@ -254,7 +254,7 @@ window.CONTENT = {
     },
     ui: { skip: 'Skip to content', more: 'Show more', less: 'Show less', newTab: '(opens in a new tab)', top: 'Back to top' },
     hero: {
-      kicker: 'Process Engineering | Continuous Improvement | Operations Management',
+      kicker: 'Process Engineering | Continuous Improvement | Operational Excellence',
       title: 'From the shop floor to continuous improvement.',
       intro: "I'm Edson Junior de Oliveira, a Production Engineer with more than 11 years in flexible pipe manufacturing for Oil & Gas. I went from machine operation to team leadership, and I apply Lean, SMED and Standardized Work to cut setup time, cycle time and waste.",
       ctaCv: 'Download résumé (PT)',
@@ -265,7 +265,7 @@ window.CONTENT = {
       highlights: [
         { title: 'Process engineering', text: 'SMED, Standardized Work, VSM and line balancing' },
         { title: 'Continuous improvement', text: 'Lean, Kaizen, PDCA, root cause analysis and Six Sigma Green Belt' },
-        { title: 'Operations management', text: 'Team leadership and daily production, safety and quality targets' },
+        { title: 'Operational excellence', text: 'Team leadership and daily production, safety and quality targets' },
       ],
     },
     about: {
