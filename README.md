@@ -13,6 +13,7 @@ assets/js/content.js       TODO o texto e os links, em português (pt) e inglês
 assets/js/main.js          monta a página e cuida de idioma, tema, menu, "ver mais" e detalhes dos projetos
 assets/css/styles.css      visual; as cores dos temas claro e escuro ficam no início do arquivo
 assets/img/                foto e imagem de compartilhamento (og-image.jpg)
+assets/fonts/              fonte Inter, servida pelo próprio site
 assets/docs/               currículo em PDF do botão "Baixar currículo"
 favicon.svg                ícone da aba do navegador
 ```
@@ -23,7 +24,6 @@ favicon.svg                ícone da aba do navegador
 - **WhatsApp, LinkedIn e currículo:** objeto `LINKS`, no início de `assets/js/content.js`.
 - **Currículo:** substitua `assets/docs/Curriculo_Edson_Junior_de_Oliveira.pdf` por um arquivo com o mesmo nome.
 - **Cores:** início de `assets/css/styles.css` (`:root` para o tema claro e os blocos seguintes para o escuro).
-- **Fontes:** IBM Plex Sans (títulos e texto) e IBM Plex Mono (números, datas, rótulos e etiquetas), carregadas do Google Fonts em `index.html` e definidas nas variáveis `--font-sans` e `--font-mono` de `assets/css/styles.css`.
 
 ## Ver no computador
 
