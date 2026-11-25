@@ -172,18 +172,21 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
   opacity: 0; transition: opacity .2s; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); white-space: nowrap;
 }
 .photo-btn:hover .photo-hint, .photo-btn:focus-visible .photo-hint, .shot-media:hover .photo-hint, .shot-media:focus-visible .photo-hint { opacity: 1; }
+/* na foto principal o aviso fica no canto direito, longe das etiquetas */
+.photo-btn .photo-hint { left: auto; right: 16px; transform: none; }
+@media (hover: none) { .photo-hint { display: none; } }
 .photo-tag {
-  position: absolute; display: grid; gap: 1px; background: var(--surface); color: var(--ink); border: 1px solid var(--line); border-radius: 12px;
+  position: relative; display: grid; gap: 1px; background: var(--surface); color: var(--ink); border: 1px solid var(--line); border-radius: 12px;
   padding: 10px 15px; box-shadow: var(--shadow-lg); font-size: 13px; line-height: 1.3;
 }
 .photo-tag b { font: 600 17px/1.15 var(--display); }
 .photo-tag span { color: var(--accent-text); font-size: 11.5px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
-.photo-tag.t1 { top: 30px; right: -26px; }
-.photo-tag.t2 { left: -26px; bottom: 40px; grid-template-columns: auto auto; column-gap: 9px; align-items: center; }
+.photo-tags { position: absolute; left: -26px; bottom: 34px; display: grid; gap: 10px; justify-items: start; }
+.photo-tag.t2 { grid-template-columns: auto auto; column-gap: 9px; align-items: center; }
 .photo-tag.t2 .dot { grid-row: 1 / span 2; }
 .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 30%, transparent); }
 .hero .photo-tag { animation: float-in .7s .35s ease both; }
-.hero .photo-tag.t2 { animation-delay: .5s; }
+.hero .photo-tag.t1 { animation-delay: .5s; }
 @keyframes float-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
 
 /* ---------- trajetória ---------- */
@@ -404,8 +407,7 @@ p.desc { color: var(--ink-2); font-size: 15px; }
   .hero { padding: 28px 0 64px; }
   .hero-grid, .about-grid { grid-template-columns: minmax(0, 1fr); gap: 40px; }
   .photo { justify-self: start; max-width: 320px; order: -1; margin: 0 0 18px; }
-  .photo-tag.t1 { right: -18px; }
-  .photo-tag.t2 { left: auto; right: -18px; bottom: 26px; }
+  .photo-tags { left: auto; right: -18px; bottom: 24px; justify-items: end; }
   .projects, .value-grid { grid-template-columns: minmax(0, 1fr); }
   .project.featured { grid-template-columns: minmax(0, 1fr); }
   .project.featured .project-media { min-height: 0; aspect-ratio: 16 / 10; }

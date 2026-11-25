@@ -91,8 +91,11 @@
           '<span class="photo-fallback" aria-hidden="true">LF</span>' + img(h.photo, h.photoAlt, 'photo-img', ' fetchpriority="high" loading="eager"') +
           '<span class="photo-hint">' + I.zoom + esc(C.ui.zoom) + '</span>' +
         '</button>' +
-        '<div class="photo-tag t1"><b>' + esc(h.tags[0].b) + '</b><span>' + esc(h.tags[0].t) + '</span></div>' +
-        '<div class="photo-tag t2"><span class="dot" aria-hidden="true"></span><b>' + esc(h.tags[1].b) + '</b><span>' + esc(h.tags[1].t) + '</span></div>' +
+        // as etiquetas ficam empilhadas na parte de baixo da foto, longe do rosto
+        '<div class="photo-tags">' +
+          '<div class="photo-tag t2"><span class="dot" aria-hidden="true"></span><b>' + esc(h.tags[1].b) + '</b><span>' + esc(h.tags[1].t) + '</span></div>' +
+          '<div class="photo-tag t1"><b>' + esc(h.tags[0].b) + '</b><span>' + esc(h.tags[0].t) + '</span></div>' +
+        '</div>' +
       '</div>' +
     '</div></div></section>';
   }
