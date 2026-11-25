@@ -193,35 +193,51 @@ window.CONTENT = {
       title: "Certificações",
       groups: [
         {
-          title: "Melhoria contínua, Lean e liderança",
+          title: "Lean e melhoria contínua",
           items: [
             { name: "Six Sigma Green Belt", issuer: "FM2S Educação e Melhoria Contínua", date: "2026" },
-            { name: "CEP, Controle Estatístico de Processo", issuer: "FM2S", date: "2026" },
             { name: "Especialista Lean", issuer: "FM2S", date: "2026" },
-            { name: "Metodologia Kanban", issuer: "FM2S", date: "2026" },
             { name: "Formação Especialista em Melhoria Contínua", issuer: "LeanPlus", date: "2026" },
-            { name: "Gestão de Pessoas e Liderança", issuer: "Expert Cursos", date: "2026" },
+            { name: "VSM (Mapa do Fluxo de Valor)", issuer: "FM2S", date: "2026" },
+            { name: "Metodologia Kanban", issuer: "FM2S", date: "2026" },
           ],
         },
         {
-          title: "Processos e modelagem",
+          title: "Qualidade e estatística",
           items: [
+            { name: "CEP (Controle Estatístico de Processo)", issuer: "FM2S", date: "2026" },
+            { name: "Análises Estatísticas no Minitab 18", issuer: "Voitto", date: "2026" },
+          ],
+        },
+        {
+          title: "Engenharia e modelagem de processos",
+          items: [
+            { name: "Engenharia de Tempos e Métodos", issuer: "IMAM", date: "2026" },
             { name: "BPM, BPMN 2.0 e modelagem de processos com Bizagi", issuer: "Udemy, 3 cursos", date: "2026" },
           ],
         },
         {
           title: "Dados e planejamento",
           items: [
-            { name: "Power BI Avançado", issuer: "Superprof", date: "2026" },
-            { name: "MS Project Avançado", issuer: "Superprof", date: "2026" },
-            { name: "Excel Avançado e Power Query", issuer: "Superprof", date: "2025" },
+            { name: "Excel Avançado e Power Query", issuer: "Superprof, aulas particulares", date: "2026" },
+            { name: "Power BI Avançado", issuer: "Superprof, aulas particulares", date: "2026" },
+            { name: "MS Project Avançado", issuer: "Superprof, aulas particulares", date: "2026" },
           ],
         },
         {
           title: "Inteligência artificial",
           items: [
             { name: "Fundamentos da IA Generativa", issuer: "Asimov Academy", date: "2026" },
-            { name: "Engenharia de Prompt", issuer: "Asimov Academy", date: "2026" },
+            { name: "Formação em ChatGPT Work e ChatGPT Plus", issuer: "Udemy", date: "2026" },
+            { name: "Engenharia de Prompts", issuer: "Asimov Academy", date: "2026" },
+            { name: "Análise de dados com IA", issuer: "Asimov Academy", date: "2026" },
+          ],
+        },
+        {
+          title: "Liderança e gestão de pessoas",
+          items: [
+            { name: "Curso Avançado de Liderança e Inteligência Emocional", issuer: "Leadership: a Master Class", date: "2026" },
+            { name: "Gestão de Pessoas e Liderança", issuer: "Expert Cursos", date: "2026" },
           ],
         },
         {
@@ -426,35 +442,51 @@ window.CONTENT = {
       title: "Certifications",
       groups: [
         {
-          title: "Continuous improvement, Lean and leadership",
+          title: "Lean and continuous improvement",
           items: [
             { name: "Six Sigma Green Belt", issuer: "FM2S Educação e Melhoria Contínua", date: "2026" },
-            { name: "SPC, Statistical Process Control", issuer: "FM2S", date: "2026" },
             { name: "Lean Specialist", issuer: "FM2S", date: "2026" },
-            { name: "Kanban methodology", issuer: "FM2S", date: "2026" },
             { name: "Continuous Improvement Specialist program", issuer: "LeanPlus", date: "2026" },
-            { name: "People Management and Leadership", issuer: "Expert Cursos", date: "2026" },
+            { name: "VSM (Value Stream Mapping)", issuer: "FM2S", date: "2026" },
+            { name: "Kanban methodology", issuer: "FM2S", date: "2026" },
           ],
         },
         {
-          title: "Process modeling",
+          title: "Quality and statistics",
           items: [
+            { name: "SPC (Statistical Process Control)", issuer: "FM2S", date: "2026" },
+            { name: "Statistical Analysis in Minitab 18", issuer: "Voitto", date: "2026" },
+          ],
+        },
+        {
+          title: "Process engineering and modeling",
+          items: [
+            { name: "Time and Methods Engineering", issuer: "IMAM", date: "2026" },
             { name: "BPM, BPMN 2.0 and process modeling with Bizagi", issuer: "Udemy, 3 courses", date: "2026" },
           ],
         },
         {
           title: "Data and planning",
           items: [
-            { name: "Advanced Power BI", issuer: "Superprof", date: "2026" },
-            { name: "Advanced MS Project", issuer: "Superprof", date: "2026" },
-            { name: "Advanced Excel and Power Query", issuer: "Superprof", date: "2025" },
+            { name: "Advanced Excel and Power Query", issuer: "Superprof, private lessons", date: "2026" },
+            { name: "Advanced Power BI", issuer: "Superprof, private lessons", date: "2026" },
+            { name: "Advanced MS Project", issuer: "Superprof, private lessons", date: "2026" },
           ],
         },
         {
           title: "Artificial intelligence",
           items: [
             { name: "Generative AI fundamentals", issuer: "Asimov Academy", date: "2026" },
+            { name: "ChatGPT Work and ChatGPT Plus training", issuer: "Udemy", date: "2026" },
             { name: "Prompt engineering", issuer: "Asimov Academy", date: "2026" },
+            { name: "Data analysis with AI", issuer: "Asimov Academy", date: "2026" },
+          ],
+        },
+        {
+          title: "Leadership and people management",
+          items: [
+            { name: "Advanced Leadership and Emotional Intelligence course", issuer: "Leadership: a Master Class", date: "2026" },
+            { name: "People Management and Leadership", issuer: "Expert Cursos", date: "2026" },
           ],
         },
         {

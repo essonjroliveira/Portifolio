@@ -280,8 +280,8 @@ svg { width: 18px; height: 18px; flex: 0 0 auto; fill: none; stroke: currentColo
 .certs { padding: 4px 26px; margin-top: 28px; }
 .cert-group { padding: 22px 0; border-bottom: 1px solid var(--line-2); }
 .cert-group:last-child { border-bottom: 0; }
-.cert-group h3 { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; font-size: 15.5px; line-height: 1.35; font-weight: 700; color: var(--accent-text); }
-.cert-group h3 span { font-size: 12px; font-weight: 700; min-width: 22px; height: 22px; padding: 0 6px; border-radius: 999px; display: inline-grid; place-items: center; border: 1px solid var(--accent); color: var(--accent-text); }
+.cert-group h3 { margin-bottom: 14px; font-size: 15.5px; line-height: 1.35; font-weight: 700; color: var(--accent-text); }
+.cert-group h3 span { margin-left: 8px; vertical-align: 2px; font-size: 12px; font-weight: 700; min-width: 22px; height: 22px; padding: 0 6px; border-radius: 999px; display: inline-grid; place-items: center; border: 1px solid var(--accent); color: var(--accent-text); }
 .cert-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr)); gap: 14px 28px; }
 .cert-list li { display: grid; gap: 2px; align-content: start; }
 .cert-list b { font-size: 14px; line-height: 1.4; font-weight: 600; color: var(--ink); }
