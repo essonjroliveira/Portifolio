@@ -33,4 +33,4 @@ Na pasta do projeto, rode `python3 -m http.server` e acesse http://localhost:800
 
 1. Envie esta pasta para um repositório no GitHub.
 2. Na Vercel, escolha **Add New → Project**, importe o repositório e mantenha o preset **Other**, sem comando de build.
-3. Depois de publicar, troque em `index.html` o valor de `og:image` pelo endereço completo, por exemplo `https://seu-site.vercel.app/assets/img/og-image.jpg`. Isso faz a prévia aparecer ao compartilhar o link no LinkedIn e no WhatsApp.
+3. Endereço publicado: https://portifolio-edson.vercel.app. Se o endereço mudar, atualize `canonical`, `og:url` e `og:image` em `index.html`.
