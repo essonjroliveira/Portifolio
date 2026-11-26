@@ -125,7 +125,12 @@
       sectionHead('01', a.title, '', 't-sobre') +
       '<div class="about-grid">' +
         '<div class="about-text">' + a.paragraphs.map(function (p) { return '<p>' + esc(p) + '</p>'; }).join('') + '</div>' +
-        '<div class="facts">' + a.facts.map(function (f) { return '<div class="card fact"><b>' + esc(f.value) + '</b><span>' + esc(f.label) + '</span></div>'; }).join('') + '</div>' +
+        '<div class="facts">' + a.facts.map(function (f) {
+          // o número do início ("11+ anos") faz a mesma contagem dos números dos projetos
+          var m = String(f.value).match(/^(\d+)(.*)$/);
+          var num = m ? '<span class="count" data-to="' + m[1] + '" data-from="0" data-suffix="' + esc(m[2]) + '">' + esc(f.value) + '</span>' : esc(f.value);
+          return '<div class="card fact"><b>' + num + '</b><span>' + esc(f.label) + '</span></div>';
+        }).join('') + '</div>' +
       '</div></div></section>';
   }
 
@@ -399,7 +404,7 @@
           obs.unobserve(en.target);
         });
       }, { threshold: 0.4 });
-      app.querySelectorAll('.project').forEach(function (el) { io.observe(el); });
+      app.querySelectorAll('.project, .fact').forEach(function (el) { io.observe(el); });
     }
   }
 

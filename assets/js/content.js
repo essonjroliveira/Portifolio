@@ -213,10 +213,19 @@ window.CONTENT = {
           ],
         },
         {
-          title: "Segurança offshore",
+          title: "Dados",
           items: [
-            { name: "T-HUET, escape de helicóptero submerso", issuer: "West Group", date: "válida até 06/2031" },
-            { name: "CBSP, segurança de plataforma", issuer: "Cemel Treinamentos", date: "válida até 07/2030" },
+            { name: "Excel Avançado e Power Query", issuer: "Superprof, aulas particulares", date: "2026" },
+            { name: "Power BI Avançado", issuer: "Superprof, aulas particulares", date: "2026" },
+          ],
+        },
+        {
+          title: "Inteligência artificial",
+          items: [
+            { name: "Fundamentos da IA Generativa", issuer: "Asimov Academy", date: "2026" },
+            { name: "Engenharia de Prompts", issuer: "Asimov Academy", date: "2026" },
+            { name: "Análise de dados com IA", issuer: "Asimov Academy", date: "2026" },
+            { name: "Formação em ChatGPT Work e ChatGPT Plus", issuer: "Udemy", date: "2026" },
           ],
         },
       ],
@@ -228,19 +237,13 @@ window.CONTENT = {
             { name: "BPM, BPMN 2.0 e modelagem de processos com Bizagi", issuer: "Udemy, 3 cursos", date: "2026" },
             { name: "MS Project Avançado", issuer: "Superprof, aulas particulares", date: "2026" },
           ] },
-          { title: "Dados", items: [
-            { name: "Excel Avançado e Power Query", issuer: "Superprof, aulas particulares", date: "2026" },
-            { name: "Power BI Avançado", issuer: "Superprof, aulas particulares", date: "2026" },
-          ] },
-          { title: "Inteligência artificial", items: [
-            { name: "Fundamentos da IA Generativa", issuer: "Asimov Academy", date: "2026" },
-            { name: "Engenharia de Prompts", issuer: "Asimov Academy", date: "2026" },
-            { name: "Análise de dados com IA", issuer: "Asimov Academy", date: "2026" },
-            { name: "Formação em ChatGPT Work e ChatGPT Plus", issuer: "Udemy", date: "2026" },
-          ] },
           { title: "Liderança e gestão de pessoas", items: [
             { name: "Curso Avançado de Liderança e Inteligência Emocional", issuer: "Leadership: a Master Class", date: "2026" },
             { name: "Gestão de Pessoas e Liderança", issuer: "Expert Cursos", date: "2026" },
+          ] },
+          { title: "Segurança offshore", items: [
+            { name: "T-HUET, escape de helicóptero submerso", issuer: "West Group", date: "válida até 06/2031" },
+            { name: "CBSP, segurança de plataforma", issuer: "Cemel Treinamentos", date: "válida até 07/2030" },
           ] },
         ],
       },
@@ -458,10 +461,19 @@ window.CONTENT = {
           ],
         },
         {
-          title: "Offshore safety",
+          title: "Data",
           items: [
-            { name: "T-HUET, helicopter underwater escape training", issuer: "West Group", date: "valid until 06/2031" },
-            { name: "CBSP, basic platform safety course", issuer: "Cemel Treinamentos", date: "valid until 07/2030" },
+            { name: "Advanced Excel and Power Query", issuer: "Superprof, private lessons", date: "2026" },
+            { name: "Advanced Power BI", issuer: "Superprof, private lessons", date: "2026" },
+          ],
+        },
+        {
+          title: "Artificial intelligence",
+          items: [
+            { name: "Generative AI fundamentals", issuer: "Asimov Academy", date: "2026" },
+            { name: "Prompt engineering", issuer: "Asimov Academy", date: "2026" },
+            { name: "Data analysis with AI", issuer: "Asimov Academy", date: "2026" },
+            { name: "ChatGPT Work and ChatGPT Plus training", issuer: "Udemy", date: "2026" },
           ],
         },
       ],
@@ -473,19 +485,13 @@ window.CONTENT = {
             { name: "BPM, BPMN 2.0 and process modeling with Bizagi", issuer: "Udemy, 3 courses", date: "2026" },
             { name: "Advanced MS Project", issuer: "Superprof, private lessons", date: "2026" },
           ] },
-          { title: "Data", items: [
-            { name: "Advanced Excel and Power Query", issuer: "Superprof, private lessons", date: "2026" },
-            { name: "Advanced Power BI", issuer: "Superprof, private lessons", date: "2026" },
-          ] },
-          { title: "Artificial intelligence", items: [
-            { name: "Generative AI fundamentals", issuer: "Asimov Academy", date: "2026" },
-            { name: "Prompt engineering", issuer: "Asimov Academy", date: "2026" },
-            { name: "Data analysis with AI", issuer: "Asimov Academy", date: "2026" },
-            { name: "ChatGPT Work and ChatGPT Plus training", issuer: "Udemy", date: "2026" },
-          ] },
           { title: "Leadership and people management", items: [
             { name: "Advanced Leadership and Emotional Intelligence course", issuer: "Leadership: a Master Class", date: "2026" },
             { name: "People Management and Leadership", issuer: "Expert Cursos", date: "2026" },
+          ] },
+          { title: "Offshore safety", items: [
+            { name: "T-HUET, helicopter underwater escape training", issuer: "West Group", date: "valid until 06/2031" },
+            { name: "CBSP, basic platform safety course", issuer: "Cemel Treinamentos", date: "valid until 07/2030" },
           ] },
         ],
       },
