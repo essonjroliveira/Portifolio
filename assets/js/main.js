@@ -96,7 +96,7 @@
           '<h1>' + titleWithAccent(h.title) + '</h1>' +
           '<p class="hero-intro">' + esc(h.intro) + '</p>' +
           '<div class="hero-actions">' +
-            '<a class="btn primary" href="' + LINKS.curriculo + '" download>' + I.download + esc(h.ctaCv) + '</a>' +
+            '<a class="btn primary" href="' + cvLink() + '" download>' + I.download + esc(h.ctaCv) + '</a>' +
             '<a class="btn" href="' + LINKS.whatsapp + '"' + ext(c, h.ctaWhats + ' ' + LINKS.whatsappText) + '>' + I.chat + esc(h.ctaWhats) + '</a>' +
             '<a class="btn" href="' + LINKS.linkedin + '"' + ext(c, 'LinkedIn') + '>' + I.profile + esc(h.ctaLinkedin) + '</a>' +
           '</div>' +
@@ -243,19 +243,29 @@
     '</div></section>';
   }
 
+  // currículo no idioma da página
+  function cvLink() { return state.lang === 'en' ? LINKS.curriculoEn : LINKS.curriculo; }
+
+  function certList(items) {
+    return '<ul class="cert-list">' + items.map(function (x) {
+      return '<li><b>' + esc(x.name) + '</b><span>' + esc(x.issuer) + (x.date ? ' · ' + esc(x.date) : '') + '</span></li>';
+    }).join('') + '</ul>';
+  }
+
+  // certificações em destaque sempre visíveis; cursos complementares recolhidos
   function certs(c) {
-    var s = c.certs, VIS = 2;
-    var hidden = s.groups.slice(VIS).reduce(function (n, g) { return n + g.items.length; }, 0);
+    var s = c.certs, k = s.courses;
+    var total = k.groups.reduce(function (n, g) { return n + g.items.length; }, 0);
     return '<section id="certificacoes" class="section" aria-labelledby="t-cert"><div class="wrap reveal">' +
-      sectionHead('07', s.title, '', 't-cert') +
-      '<div class="card certs collapsible">' + s.groups.map(function (g, gi) {
-        return '<div class="cert-group' + (gi >= VIS ? ' extra' : '') + '">' +
-          '<h3>' + esc(g.title) + '<span>' + g.items.length + '</span></h3>' +
-          '<ul class="cert-list">' + g.items.map(function (x) {
-            return '<li><b>' + esc(x.name) + '</b><span>' + esc(x.issuer) + (x.date ? ' · ' + esc(x.date) : '') + '</span></li>';
-          }).join('') + '</ul></div>';
+      sectionHead('07', s.title, s.lead, 't-cert') +
+      '<div class="card certs">' + s.groups.map(function (g) {
+        return '<div class="cert-group"><h3>' + esc(g.title) + '<span>' + g.items.length + '</span></h3>' + certList(g.items) + '</div>';
       }).join('') + '</div>' +
-      (hidden ? moreBtn(c, hidden, 'mobile-only') : '') +
+      '<details class="card courses"><summary><span>' + esc(k.title) + '<em>' + total + '</em></span>' + I.chevron + '</summary>' +
+        '<div class="courses-body">' + k.groups.map(function (g) {
+          return '<div class="cert-group"><h3>' + esc(g.title) + '</h3>' + certList(g.items) + '</div>';
+        }).join('') + '</div>' +
+      '</details>' +
     '</div></section>';
   }
 
@@ -268,7 +278,8 @@
         '<div class="contact-actions"><div class="contact-main">' +
           '<a class="btn primary" href="' + LINKS.whatsapp + '"' + ext(c, k.whats + ' ' + LINKS.whatsappText) + '>' + I.chat + esc(k.whats) + '</a>' +
           '<a class="btn ghost" href="' + LINKS.linkedin + '"' + ext(c, 'LinkedIn') + '>' + I.profile + 'LinkedIn</a>' +
-          '<a class="btn ghost" href="' + LINKS.curriculo + '" download>' + I.download + esc(k.cv) + '</a>' +
+          '<a class="btn ghost" href="mailto:' + LINKS.email + '">' + I.mail + esc(k.email) + '</a>' +
+          '<a class="btn ghost" href="' + cvLink() + '" download>' + I.download + esc(k.cv) + '</a>' +
         '</div></div>' +
         '<p class="contact-lines"><span>WhatsApp ' + esc(LINKS.whatsappText) + '</span><span>' + esc(LINKS.linkedinText) + '</span><span>' + esc(LINKS.email) + '</span></p>' +
         '<div class="contact-avail"><h3>' + esc(k.availabilityTitle) + '</h3><ul class="chips">' +

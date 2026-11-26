@@ -14,7 +14,7 @@ assets/js/main.js          monta a página e cuida de idioma, tema, menu, "ver m
 assets/css/styles.css      visual; as cores dos temas claro e escuro ficam no início do arquivo
 assets/img/                foto e imagem de compartilhamento (og-image.jpg)
 assets/fonts/              fonte Inter, servida pelo próprio site
-assets/docs/               currículo em PDF do botão "Baixar currículo"
+assets/docs/               currículos em PDF (português e inglês) do botão "Baixar currículo"
 favicon.svg                ícone da aba do navegador
 ```
 
@@ -22,7 +22,7 @@ favicon.svg                ícone da aba do navegador
 
 - **Textos, projetos, experiências e certificações:** `assets/js/content.js`. Cada texto existe em `pt` e em `en`; altere os dois.
 - **WhatsApp, LinkedIn e currículo:** objeto `LINKS`, no início de `assets/js/content.js`.
-- **Currículo:** substitua `assets/docs/Curriculo_Edson_Junior_de_Oliveira.pdf` por um arquivo com o mesmo nome.
+- **Currículos:** `assets/docs/Curriculo_Edson_Junior_de_Oliveira.pdf` (português) e `assets/docs/Resume_Edson_Junior_de_Oliveira_EN.pdf` (inglês). O botão "Baixar currículo" entrega o arquivo do idioma escolhido na página. Para trocar, substitua o arquivo mantendo o mesmo nome.
 - **Cores:** início de `assets/css/styles.css` (`:root` para o tema claro e os blocos seguintes para o escuro).
 
 ## Ver no computador

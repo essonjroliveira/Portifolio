@@ -9,6 +9,7 @@ window.LINKS = {
   linkedinText: 'linkedin.com/in/edson-junior-de-oliveira',
   email: 'edsonjr.oliveira@yahoo.com.br',
   curriculo: 'assets/docs/Curriculo_Edson_Junior_de_Oliveira.pdf',
+  curriculoEn: 'assets/docs/Resume_Edson_Junior_de_Oliveira_EN.pdf',
 };
 
 window.CONTENT = {
@@ -39,8 +40,9 @@ window.CONTENT = {
       title: 'Sobre',
       paragraphs: [
         'Sou Engenheiro de Produção e Técnico em Mecânica Industrial. Conheço o processo por dentro: operei as máquinas, inspecionei o produto, treinei pessoas e conduzi a linha.',
-        'Entrei na NOV Flexibles em 2013 como operador de produção e cheguei a Operador Líder, respondendo pela liderança de equipes e pelas metas diárias de produção, segurança e qualidade. Nessa rotina desenvolvi meu trabalho em melhoria contínua, com projetos de redução de setup, tempo de ciclo e desperdício, e atuei por três meses na planta da NOV na Dinamarca.',
+        'Entrei na NOV Flexibles em 2013 como operador de produção e cheguei a Operador Líder, respondendo pela liderança de equipes e pelas metas diárias de produção, segurança e qualidade. Nessa rotina desenvolvi meu trabalho em melhoria contínua, com projetos de redução de setup, tempo de ciclo e desperdício. Em 2024, atuei por três meses na planta da NOV na Dinamarca, colaborando no mapeamento do fluxo de valor, na padronização de processos e na gestão visual Lean.',
         'Concluí a graduação em 2024 e a pós-graduação em Engenharia de Gestão de Processos e Projetos em 2025. Hoje curso uma segunda pós, em Engenharia de Operações Industriais, e busco atuar em Engenharia de Processos, Melhoria Contínua, Excelência Operacional ou Coordenação de Operações.',
+        'Meu próximo passo é unir melhoria contínua e dados: estudo estatística, Minitab, Power BI e IA para encontrar e medir perdas no processo com mais precisão, e por isso começo em janeiro de 2027 uma pós em Data Science e Machine Learning.',
       ],
       facts: [
         { value: '11+ anos', label: 'na fabricação de tubos flexíveis para Óleo & Gás' },
@@ -70,7 +72,7 @@ window.CONTENT = {
         {
           title: 'Melhoria contínua e qualidade',
           items: ['Lean Manufacturing', 'Eventos Kaizen', 'Ciclo PDCA', 'Análise de causa raiz (Ishikawa, Pareto, 5 Porquês)', 'Planos de ação 5W2H', 'Programa 5S', 'TPM e OEE', 'Kanban e Poka-Yoke'],
-          note: { label: 'Onde usei', text: 'nos rituais de causa raiz com a Engenharia e nas rotinas de Kaizen e gestão visual na planta da Dinamarca.' },
+          note: { label: 'Onde usei', text: 'nos rituais de causa raiz com a Engenharia e na gestão visual Lean e na padronização de processos na planta da Dinamarca.' },
         },
         {
           title: 'Liderança e gestão operacional',
@@ -141,9 +143,9 @@ window.CONTENT = {
           role: "Operador Líder", sub: '', company: "National Oilwell Varco · NOV Flexibles", place: "Fabricação de tubos flexíveis",
           period: "out. 2017 a dez. 2024 · 7 anos e 3 meses",
           bullets: [
-            {"b": "Liderança de Alta Performance", "t": "Gestão direta de equipes na linha de fabricação de tubos flexíveis, garantindo metas diárias de produção, segurança (HSE), qualidade e BPF."},
+            {"b": "Liderança de equipes", "t": "Gestão direta de equipes na linha de fabricação de tubos flexíveis, garantindo metas diárias de produção, segurança (HSE), qualidade e BPF."},
             {"b": "Inovação e Redução de Setup", "t": "Idealizou e aplicou metodologia própria baseada em SMED para cálculo de trocas múltiplas de bobinas, resultando em 50% de redução no tempo de setup e quadruplicando a eficiência da linha. O projeto foi reconhecido pela Diretoria e replicado na planta industrial da Dinamarca."},
-            {"b": "Experiência Internacional (Dinamarca – 2024)", "t": "Atuação direta por 3 meses na unidade fabril da NOV na Dinamarca, liderando iniciativas de Lean Manufacturing, melhoria de fluxos e implementação de gestão visual e rotinas de Kaizen."},
+            {"b": "Experiência Internacional (Dinamarca – 2024)", "t": "Atuação direta por 3 meses na unidade fabril da NOV na Dinamarca, colaborando no mapeamento do fluxo de valor, na padronização de processos e na implantação de gestão visual Lean no ambiente fabril."},
             {"b": "Eliminação de Gargalos & Lean", "t": "Participação no programa de Lean Manufacturing em parceria com a Engenharia no setor de maior gargalo da fábrica, implementando Trabalho Padronizado em 7 meses e reduzindo em 30% o tempo de ciclo das operações."},
             {"b": "Redução de Desperdício de Matéria-Prima", "t": "Desenvolveu e validou projeto de redução de sobra de fio de 80 m para 40 m por bobina em projetos-piloto (cerca de 120 bobinas por projeto), gerando expressiva economia de insumos."},
             {"b": "Qualidade e Resolução de Problemas", "t": "Participação em rituais multidisciplinares de Análise de Causa Raiz utilizando Diagrama de Ishikawa, Diagrama de Pareto e a técnica dos 5 Porquês, desdobrando soluções via 5W2H sob a disciplina do PDCA."},
@@ -190,54 +192,24 @@ window.CONTENT = {
       languages: 'Inglês avançado — com experiência internacional.',
     },
     certs: {
-      title: "Certificações",
+      title: "Certificações e cursos",
+      lead: "As certificações ligadas ao foco profissional ficam em destaque. Os cursos complementares estão logo abaixo.",
       groups: [
         {
-          title: "Lean e melhoria contínua",
+          title: "Lean, Six Sigma e melhoria contínua",
           items: [
             { name: "Six Sigma Green Belt", issuer: "FM2S Educação e Melhoria Contínua", date: "2026" },
             { name: "Especialista Lean", issuer: "FM2S", date: "2026" },
             { name: "Formação Especialista em Melhoria Contínua", issuer: "LeanPlus", date: "2026" },
             { name: "VSM (Mapa do Fluxo de Valor)", issuer: "FM2S", date: "2026" },
-            { name: "Metodologia Kanban", issuer: "FM2S", date: "2026" },
           ],
         },
         {
-          title: "Qualidade e estatística",
+          title: "Qualidade, estatística e métodos",
           items: [
             { name: "CEP (Controle Estatístico de Processo)", issuer: "FM2S", date: "2026" },
             { name: "Análises Estatísticas no Minitab 18", issuer: "Voitto", date: "2026" },
-          ],
-        },
-        {
-          title: "Engenharia e modelagem de processos",
-          items: [
             { name: "Engenharia de Tempos e Métodos", issuer: "IMAM", date: "2026" },
-            { name: "BPM, BPMN 2.0 e modelagem de processos com Bizagi", issuer: "Udemy, 3 cursos", date: "2026" },
-          ],
-        },
-        {
-          title: "Dados e planejamento",
-          items: [
-            { name: "Excel Avançado e Power Query", issuer: "Superprof, aulas particulares", date: "2026" },
-            { name: "Power BI Avançado", issuer: "Superprof, aulas particulares", date: "2026" },
-            { name: "MS Project Avançado", issuer: "Superprof, aulas particulares", date: "2026" },
-          ],
-        },
-        {
-          title: "Inteligência artificial",
-          items: [
-            { name: "Fundamentos da IA Generativa", issuer: "Asimov Academy", date: "2026" },
-            { name: "Formação em ChatGPT Work e ChatGPT Plus", issuer: "Udemy", date: "2026" },
-            { name: "Engenharia de Prompts", issuer: "Asimov Academy", date: "2026" },
-            { name: "Análise de dados com IA", issuer: "Asimov Academy", date: "2026" },
-          ],
-        },
-        {
-          title: "Liderança e gestão de pessoas",
-          items: [
-            { name: "Curso Avançado de Liderança e Inteligência Emocional", issuer: "Leadership: a Master Class", date: "2026" },
-            { name: "Gestão de Pessoas e Liderança", issuer: "Expert Cursos", date: "2026" },
           ],
         },
         {
@@ -248,11 +220,36 @@ window.CONTENT = {
           ],
         },
       ],
+      courses: {
+        title: "Cursos complementares",
+        groups: [
+          { title: "Processos e planejamento", items: [
+            { name: "Metodologia Kanban", issuer: "FM2S", date: "2026" },
+            { name: "BPM, BPMN 2.0 e modelagem de processos com Bizagi", issuer: "Udemy, 3 cursos", date: "2026" },
+            { name: "MS Project Avançado", issuer: "Superprof, aulas particulares", date: "2026" },
+          ] },
+          { title: "Dados", items: [
+            { name: "Excel Avançado e Power Query", issuer: "Superprof, aulas particulares", date: "2026" },
+            { name: "Power BI Avançado", issuer: "Superprof, aulas particulares", date: "2026" },
+          ] },
+          { title: "Inteligência artificial", items: [
+            { name: "Fundamentos da IA Generativa", issuer: "Asimov Academy", date: "2026" },
+            { name: "Engenharia de Prompts", issuer: "Asimov Academy", date: "2026" },
+            { name: "Análise de dados com IA", issuer: "Asimov Academy", date: "2026" },
+            { name: "Formação em ChatGPT Work e ChatGPT Plus", issuer: "Udemy", date: "2026" },
+          ] },
+          { title: "Liderança e gestão de pessoas", items: [
+            { name: "Curso Avançado de Liderança e Inteligência Emocional", issuer: "Leadership: a Master Class", date: "2026" },
+            { name: "Gestão de Pessoas e Liderança", issuer: "Expert Cursos", date: "2026" },
+          ] },
+        ],
+      },
     },
     contact: {
       title: 'Vamos conversar',
       text: 'Estou disponível para oportunidades em Engenharia de Processos, Melhoria Contínua, Excelência Operacional e Coordenação de Operações. Fale comigo pelo WhatsApp, LinkedIn ou E-mail.',
       whats: 'Contato WhatsApp',
+      email: 'E-mail',
       cv: 'Baixar currículo',
       availabilityTitle: 'Disponibilidade',
       availability: ['Embarques offshore, com CBSP e T-HUET válidas', 'Viagens nacionais e internacionais', 'Mudança de residência, no Brasil ou no exterior'],
@@ -273,7 +270,7 @@ window.CONTENT = {
       kicker: 'Process Engineering | Continuous Improvement | Operational Excellence',
       title: 'From the shop floor to continuous improvement.',
       intro: "I'm Edson Junior de Oliveira, a Production Engineer with more than 11 years in flexible pipe manufacturing for Oil & Gas. I went from machine operation to team leadership, and I apply Lean, SMED and Standardized Work to cut setup time, cycle time and waste.",
-      ctaCv: 'Download résumé (PT)',
+      ctaCv: 'Download résumé',
       ctaWhats: 'WhatsApp',
       ctaLinkedin: 'LinkedIn',
       photoAlt: 'Portrait of Edson Junior de Oliveira, in a blue shirt with arms crossed',
@@ -288,8 +285,9 @@ window.CONTENT = {
       title: 'About',
       paragraphs: [
         "I'm a Production Engineer and an Industrial Mechanics Technician. I know the process from the inside: I ran the machines, inspected the product, trained people and led the line.",
-        "I joined NOV Flexibles in 2013 as a production operator and rose to Lead Operator, responsible for team leadership and for daily production, safety and quality targets. In that routine I built my continuous improvement work, with projects that reduced setup time, cycle time and waste, and I spent three months at NOV's plant in Denmark.",
+        "I joined NOV Flexibles in 2013 as a production operator and rose to Lead Operator, responsible for team leadership and for daily production, safety and quality targets. In that routine I built my continuous improvement work, with projects that reduced setup time, cycle time and waste. In 2024 I spent three months at NOV's plant in Denmark, collaborating on value stream mapping, process standardization and Lean visual management.",
         "I earned my engineering degree in 2024 and a postgraduate degree in Process and Project Management Engineering in 2025. I'm now taking a second postgraduate program, in Industrial Operations Engineering, and I'm looking for roles in Process Engineering, Continuous Improvement, Operational Excellence or Operations Coordination.",
+        'My next step is to bring continuous improvement and data together: I study statistics, Minitab, Power BI and AI to find and measure process losses more precisely, which is why I start a postgraduate program in Data Science and Machine Learning in January 2027.',
       ],
       facts: [
         { value: '11+ years', label: 'in flexible pipe manufacturing for Oil & Gas' },
@@ -319,7 +317,7 @@ window.CONTENT = {
         {
           title: 'Continuous improvement and quality',
           items: ['Lean Manufacturing', 'Kaizen events', 'PDCA cycle', 'Root cause analysis (Ishikawa, Pareto, 5 Whys)', '5W2H action plans', '5S program', 'TPM and OEE', 'Kanban and Poka-Yoke'],
-          note: { label: 'Where I used it', text: 'in root cause sessions with Engineering, and in Kaizen and visual management routines at the Denmark plant.' },
+          note: { label: 'Where I used it', text: 'in root cause sessions with Engineering, and in Lean visual management and process standardization at the Denmark plant.' },
         },
         {
           title: 'Leadership and operations management',
@@ -390,9 +388,9 @@ window.CONTENT = {
           role: "Lead Operator", sub: '', company: "National Oilwell Varco · NOV Flexibles", place: "Flexible pipe manufacturing",
           period: "Oct 2017 – Dec 2024 · 7 years 3 months",
           bullets: [
-            {"b": "High-performance leadership", "t": "Direct management of teams on the flexible pipe production line, ensuring daily production, safety (HSE), quality and GMP targets."},
+            {"b": "Team leadership", "t": "Direct management of teams on the flexible pipe production line, ensuring daily production, safety (HSE), quality and GMP targets."},
             {"b": "Innovation and setup reduction", "t": "Designed and applied a proprietary SMED-based method for calculating multiple coil changeovers, cutting setup time by 50% and quadrupling line efficiency. The project was recognized by the Board and replicated at the plant in Denmark."},
-            {"b": "International experience (Denmark – 2024)", "t": "Three months of hands-on work at NOV's manufacturing plant in Denmark, leading Lean Manufacturing and flow improvement initiatives and implementing visual management and Kaizen routines."},
+            {"b": "International experience (Denmark – 2024)", "t": "Three months of hands-on work at NOV's manufacturing plant in Denmark, collaborating on value stream mapping, process standardization and the rollout of Lean visual management on the shop floor."},
             {"b": "Bottleneck elimination & Lean", "t": "Took part in the Lean Manufacturing program with Engineering in the plant's main bottleneck area, implementing Standardized Work in 7 months and cutting operations cycle time by 30%."},
             {"b": "Raw material waste reduction", "t": "Developed and validated a project that cut leftover wire from 80 m to 40 m per coil in pilot runs (about 120 coils per run), generating significant material savings."},
             {"b": "Quality and problem solving", "t": "Took part in cross-functional root cause analysis sessions using Ishikawa diagrams, Pareto charts and the 5 Whys, deploying solutions through 5W2H under PDCA discipline."},
@@ -439,54 +437,24 @@ window.CONTENT = {
       languages: 'Advanced English — with international experience.',
     },
     certs: {
-      title: "Certifications",
+      title: "Certifications and courses",
+      lead: "Certifications tied to my professional focus come first. Complementary courses are listed below.",
       groups: [
         {
-          title: "Lean and continuous improvement",
+          title: "Lean, Six Sigma and continuous improvement",
           items: [
             { name: "Six Sigma Green Belt", issuer: "FM2S Educação e Melhoria Contínua", date: "2026" },
             { name: "Lean Specialist", issuer: "FM2S", date: "2026" },
             { name: "Continuous Improvement Specialist program", issuer: "LeanPlus", date: "2026" },
             { name: "VSM (Value Stream Mapping)", issuer: "FM2S", date: "2026" },
-            { name: "Kanban methodology", issuer: "FM2S", date: "2026" },
           ],
         },
         {
-          title: "Quality and statistics",
+          title: "Quality, statistics and methods",
           items: [
             { name: "SPC (Statistical Process Control)", issuer: "FM2S", date: "2026" },
             { name: "Statistical Analysis in Minitab 18", issuer: "Voitto", date: "2026" },
-          ],
-        },
-        {
-          title: "Process engineering and modeling",
-          items: [
             { name: "Time and Methods Engineering", issuer: "IMAM", date: "2026" },
-            { name: "BPM, BPMN 2.0 and process modeling with Bizagi", issuer: "Udemy, 3 courses", date: "2026" },
-          ],
-        },
-        {
-          title: "Data and planning",
-          items: [
-            { name: "Advanced Excel and Power Query", issuer: "Superprof, private lessons", date: "2026" },
-            { name: "Advanced Power BI", issuer: "Superprof, private lessons", date: "2026" },
-            { name: "Advanced MS Project", issuer: "Superprof, private lessons", date: "2026" },
-          ],
-        },
-        {
-          title: "Artificial intelligence",
-          items: [
-            { name: "Generative AI fundamentals", issuer: "Asimov Academy", date: "2026" },
-            { name: "ChatGPT Work and ChatGPT Plus training", issuer: "Udemy", date: "2026" },
-            { name: "Prompt engineering", issuer: "Asimov Academy", date: "2026" },
-            { name: "Data analysis with AI", issuer: "Asimov Academy", date: "2026" },
-          ],
-        },
-        {
-          title: "Leadership and people management",
-          items: [
-            { name: "Advanced Leadership and Emotional Intelligence course", issuer: "Leadership: a Master Class", date: "2026" },
-            { name: "People Management and Leadership", issuer: "Expert Cursos", date: "2026" },
           ],
         },
         {
@@ -497,12 +465,37 @@ window.CONTENT = {
           ],
         },
       ],
+      courses: {
+        title: "Complementary courses",
+        groups: [
+          { title: "Processes and planning", items: [
+            { name: "Kanban methodology", issuer: "FM2S", date: "2026" },
+            { name: "BPM, BPMN 2.0 and process modeling with Bizagi", issuer: "Udemy, 3 courses", date: "2026" },
+            { name: "Advanced MS Project", issuer: "Superprof, private lessons", date: "2026" },
+          ] },
+          { title: "Data", items: [
+            { name: "Advanced Excel and Power Query", issuer: "Superprof, private lessons", date: "2026" },
+            { name: "Advanced Power BI", issuer: "Superprof, private lessons", date: "2026" },
+          ] },
+          { title: "Artificial intelligence", items: [
+            { name: "Generative AI fundamentals", issuer: "Asimov Academy", date: "2026" },
+            { name: "Prompt engineering", issuer: "Asimov Academy", date: "2026" },
+            { name: "Data analysis with AI", issuer: "Asimov Academy", date: "2026" },
+            { name: "ChatGPT Work and ChatGPT Plus training", issuer: "Udemy", date: "2026" },
+          ] },
+          { title: "Leadership and people management", items: [
+            { name: "Advanced Leadership and Emotional Intelligence course", issuer: "Leadership: a Master Class", date: "2026" },
+            { name: "People Management and Leadership", issuer: "Expert Cursos", date: "2026" },
+          ] },
+        ],
+      },
     },
     contact: {
       title: "Let's talk",
       text: "I'm available for roles in Process Engineering, Continuous Improvement, Operational Excellence and Operations Coordination. Reach me on WhatsApp, LinkedIn or email.",
       whats: 'Contact on WhatsApp',
-      cv: 'Download résumé (PT)',
+      email: 'Email',
+      cv: 'Download résumé',
       availabilityTitle: 'Availability',
       availability: ['Offshore assignments, with valid CBSP and T-HUET', 'Domestic and international travel', 'Relocation, in Brazil or abroad'],
       location: 'Campos dos Goytacazes, RJ, Brazil',
