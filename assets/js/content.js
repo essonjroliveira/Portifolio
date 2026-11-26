@@ -250,7 +250,7 @@ window.CONTENT = {
     },
     contact: {
       title: 'Vamos conversar',
-      text: 'Estou disponível para oportunidades em Engenharia de Processos, Melhoria Contínua, Excelência Operacional e Coordenação de Operações. Fale comigo pelo WhatsApp, LinkedIn ou E-mail.',
+      text: 'Estou disponível para oportunidades em Engenharia de Processos, Melhoria Contínua e Excelência Operacional. Fale comigo pelo WhatsApp, LinkedIn ou E-mail.',
       whats: 'Contato WhatsApp',
       email: 'E-mail',
       cv: 'Baixar currículo',
@@ -498,7 +498,7 @@ window.CONTENT = {
     },
     contact: {
       title: "Let's talk",
-      text: "I'm available for roles in Process Engineering, Continuous Improvement, Operational Excellence and Operations Coordination. Reach me on WhatsApp, LinkedIn or email.",
+      text: "I'm available for roles in Process Engineering, Continuous Improvement and Operational Excellence. Reach me on WhatsApp, LinkedIn or email.",
       whats: 'Contact on WhatsApp',
       email: 'Email',
       cv: 'Download résumé',
