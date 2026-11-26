@@ -91,7 +91,12 @@ window.CONTENT = {
       lead: 'Quatro contribuições na NOV Flexibles, com o contexto, o que fiz e o resultado. Em cada uma, mostro também como eu aplicaria IA hoje.',
       context: 'Contexto', action: 'O que fiz', result: 'Resultado', ai: 'Com IA, hoje eu faria',
       details: 'Detalhes', close: 'Fechar', more: 'Ver mais projetos', less: 'Ver menos projetos',
-      recognition: { title: 'Reconhecimento em Melhoria Contínua', date: 'novembro de 2021' },
+      recognition: {
+        title: 'Reconhecimento em Melhoria Contínua', date: 'novembro de 2021',
+        text: 'Indicado na Reunião Gerencial da NOV Flexibles, no Porto do Açu, pela forte contribuição no aperfeiçoamento do plano de troca de bobinas na Tração, facilitando o entendimento e evitando possíveis erros.',
+        view: 'Ver carta',
+        alt: 'Carta de reconhecimento da NOV Flexibles a Edson Junior de Oliveira, de 29 de novembro de 2021, assinada pelo gerente da área',
+      },
       items: [
         {
           id: 'setup',
@@ -197,7 +202,7 @@ window.CONTENT = {
       title: 'Formação',
       degrees: [
         { course: 'Pós-graduação em Data Science e Machine Learning com IA', school: 'XP Educação', period: 'Previsão de início: janeiro de 2027', status: 'Início', upcoming: true },
-        { course: 'Pós-graduação em Engenharia de Operações Industriais', school: 'Faculdade Unyleya', period: 'Previsão de conclusão: 2027', status: 'Em andamento', done: false },
+        { course: 'Pós-graduação em Engenharia de Operações Industriais', school: 'Faculdade Unyleya', period: 'Previsão de conclusão: março de 2027', status: 'Em andamento', done: false },
         { course: 'Pós-graduação em Engenharia de Gestão de Processos e Projetos', school: 'Faculdade Unyleya', period: '2025', status: 'Concluída', done: true },
         { course: 'Graduação em Engenharia de Produção', school: 'Universidade Estácio de Sá', period: '2024', status: 'Concluída', done: true },
         { course: 'Técnico em Mecânica Industrial', school: 'ETC, Escola Técnica de Campos', period: '2012', status: 'Concluído', done: true },
@@ -266,6 +271,7 @@ window.CONTENT = {
     },
     contact: {
       title: 'Vamos conversar',
+      photoAlt: 'Foto de Edson Junior de Oliveira, sorrindo, de camisa azul',
       text: 'Estou disponível para oportunidades em Engenharia de Processos, Melhoria Contínua e Excelência Operacional. Fale comigo pelo WhatsApp, LinkedIn ou E-mail.',
       whats: 'Contato WhatsApp',
       email: 'E-mail',
@@ -355,7 +361,12 @@ window.CONTENT = {
       lead: 'Four contributions at NOV Flexibles, with the context, what I did and the result. For each one, I also show how I would apply AI today.',
       context: 'Context', action: 'What I did', result: 'Result', ai: 'With AI, today I would',
       details: 'Details', close: 'Close', more: 'Show more projects', less: 'Show fewer projects',
-      recognition: { title: 'Continuous Improvement recognition', date: 'November 2021' },
+      recognition: {
+        title: 'Continuous Improvement recognition', date: 'November 2021',
+        text: 'Nominated at the NOV Flexibles management meeting, at Porto do Açu, for a strong contribution to improving the coil changeover plan in the tensile armor area, making it easier to understand and preventing errors.',
+        view: 'View letter',
+        alt: 'NOV Flexibles recognition letter to Edson Junior de Oliveira, dated November 29, 2021, signed by the area manager (in Portuguese)',
+      },
       items: [
         {
           id: 'setup',
@@ -461,7 +472,7 @@ window.CONTENT = {
       title: 'Education',
       degrees: [
         { course: 'Postgraduate degree in Data Science and Machine Learning with AI', school: 'XP Educação', period: 'Expected start: January 2027', status: 'Upcoming', upcoming: true },
-        { course: 'Postgraduate degree in Industrial Operations Engineering', school: 'Faculdade Unyleya', period: 'Expected completion: 2027', status: 'In progress', done: false },
+        { course: 'Postgraduate degree in Industrial Operations Engineering', school: 'Faculdade Unyleya', period: 'Expected completion: March 2027', status: 'In progress', done: false },
         { course: 'Postgraduate degree in Process and Project Management Engineering', school: 'Faculdade Unyleya', period: '2025', status: 'Completed', done: true },
         { course: "Bachelor's degree in Production Engineering", school: 'Universidade Estácio de Sá', period: '2024', status: 'Completed', done: true },
         { course: 'Industrial Mechanics Technician', school: 'ETC, Escola Técnica de Campos', period: '2012', status: 'Completed', done: true },
@@ -530,6 +541,7 @@ window.CONTENT = {
     },
     contact: {
       title: "Let's talk",
+      photoAlt: 'Photo of Edson Junior de Oliveira, smiling, in a blue shirt',
       text: "I'm available for roles in Process Engineering, Continuous Improvement and Operational Excellence. Reach me on WhatsApp, LinkedIn or email.",
       whats: 'Contact on WhatsApp',
       email: 'Email',

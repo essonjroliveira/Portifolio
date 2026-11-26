@@ -40,6 +40,7 @@
     profile: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="2"/><circle cx="9" cy="9.5" r="2"/><path d="M5.8 17.2c.5-2.2 1.8-3.3 3.2-3.3s2.7 1.1 3.2 3.3M14.5 9h3.5M14.5 12.5h3.5"/></svg>',
     menu: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>',
     close: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>',
+    expand: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M10 20H4v-6M20 4l-7 7M4 20l7-7"/></svg>',
     chevron: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>',
     mail: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5.5" width="17" height="13" rx="1.5"/><path d="m4 7 8 6 8-6"/></svg>',
     pin: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11Z"/><circle cx="12" cy="10" r="2.3"/></svg>',
@@ -218,6 +219,28 @@
     }).join('');
   }
 
+  // reconhecimento com a carta da NOV: miniatura que amplia ao clicar
+  function recognition(r) {
+    var thumb = '<picture><source type="image/webp" srcset="assets/img/carta-reconhecimento-2021-thumb.webp">' +
+      '<img src="assets/img/carta-reconhecimento-2021-thumb.jpg" width="420" height="524" alt="' + esc(r.alt) + '" loading="lazy" decoding="async"></picture>';
+    return '<div class="recognition card">' +
+      '<div class="recog-text">' +
+        '<div class="recog-head"><b>' + esc(r.title) + '</b><span>' + esc(r.date) + '</span></div>' +
+        '<p>' + esc(r.text) + '</p>' +
+        '<button type="button" class="btn small" data-letter aria-haspopup="dialog">' + I.expand + esc(r.view) + '</button>' +
+      '</div>' +
+      '<button type="button" class="recog-thumb" data-letter aria-haspopup="dialog" aria-label="' + esc(r.view) + '">' + thumb + '</button>' +
+    '</div>';
+  }
+
+  function letterModal(c) {
+    var r = c.projects.recognition;
+    return '<button type="button" class="modal-close" aria-label="' + esc(c.projects.close) + '">' + I.close + '</button>' +
+      '<h3 id="modal-title">' + esc(r.title) + '</h3><p class="modal-date">' + esc(r.date) + '</p>' +
+      '<picture><source type="image/webp" srcset="assets/img/carta-reconhecimento-2021.webp">' +
+      '<img class="letter-img" src="assets/img/carta-reconhecimento-2021.jpg" width="1000" height="1248" alt="' + esc(r.alt) + '"></picture>';
+  }
+
   function projects(c) {
     var P = c.projects, hidden = P.items.length - 3;
     return '<section id="projetos" class="section" aria-labelledby="t-proj"><div class="wrap">' +
@@ -225,7 +248,7 @@
       '<div class="projects">' + projectsGrid(c) + '</div>' +
       (hidden > 0 ? '<div class="more-projects"><button type="button" class="btn more-projects-btn" aria-expanded="' + state.allProjects + '">' +
         '<span>' + esc(state.allProjects ? P.less : P.more + ' (' + hidden + ')') + '</span>' + I.chevron + '</button></div>' : '') +
-      '<p class="recognition card"><b>' + esc(P.recognition.title) + '</b><span>' + esc(P.recognition.date) + '</span></p>' +
+      recognition(P.recognition) +
     '</div>' +
     '<dialog class="card modal" id="project-modal" aria-labelledby="modal-title"></dialog>' +
     '</section>';
@@ -302,6 +325,10 @@
     var k = c.contact;
     return '<section id="contato" class="section" aria-labelledby="t-cont"><div class="wrap reveal">' +
       '<div class="card contact">' +
+        '<div class="contact-photo"><picture>' +
+          '<source type="image/webp" srcset="assets/img/edson-contato-320.webp 1x, assets/img/edson-contato-640.webp 2x">' +
+          '<img src="assets/img/edson-contato-320.jpg" srcset="assets/img/edson-contato-320.jpg 1x, assets/img/edson-contato-640.jpg 2x" width="160" height="160" alt="' + esc(k.photoAlt) + '" loading="lazy" decoding="async">' +
+        '</picture><span class="contact-open"><span class="dot" aria-hidden="true"></span>' + esc(c.hero.status) + '</span></div>' +
         '<p class="eyebrow">09</p><h2 class="h2" id="t-cont">' + esc(k.title) + '</h2>' +
         '<p class="contact-text">' + esc(k.text) + '</p>' +
         '<div class="contact-actions"><div class="contact-main">' +
@@ -405,10 +432,21 @@
       b.addEventListener('click', function () {
         var p = c.projects.items.filter(function (x) { return x.id === b.dataset.details; })[0];
         modal.innerHTML = modalContent(c, p);
+        modal.classList.remove('letter');
         modal.querySelector('.modal-close').addEventListener('click', function () { modal.close(); });
         if (typeof modal.showModal === 'function') modal.showModal(); else modal.setAttribute('open', '');
         document.body.classList.add('modal-open');
         modal.querySelectorAll('.count').forEach(countUp);
+        modal._opener = b;
+      });
+    });
+    app.querySelectorAll('[data-letter]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        modal.innerHTML = letterModal(c);
+        modal.classList.add('letter');
+        modal.querySelector('.modal-close').addEventListener('click', function () { modal.close(); });
+        if (typeof modal.showModal === 'function') modal.showModal(); else modal.setAttribute('open', '');
+        document.body.classList.add('modal-open');
         modal._opener = b;
       });
     });

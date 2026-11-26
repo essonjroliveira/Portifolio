@@ -228,9 +228,18 @@ svg { width: 18px; height: 18px; flex: 0 0 auto; fill: none; stroke: currentColo
 .project p.desc b { color: var(--ink); font-weight: 600; }
 .project-foot { margin-top: auto; padding-top: 6px; display: flex; flex-wrap: wrap; gap: 8px; }
 .more-projects { display: flex; justify-content: center; margin-top: 28px; }
-.recognition { margin-top: 28px; padding: 16px 22px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 6px 16px; }
-.recognition b { color: var(--ink); }
-.recognition span { color: var(--ink-2); font-size: 14.5px; }
+.recognition { margin-top: 28px; padding: 22px 24px; display: grid; grid-template-columns: minmax(0, 1fr) 150px; gap: 20px 28px; align-items: center; }
+.recog-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 4px 16px; margin-bottom: 8px; }
+.recog-head b { color: var(--ink); font-size: 17px; }
+.recog-head span { color: var(--ink-2); font-size: 14.5px; }
+.recog-text p { color: var(--ink-2); font-size: 15px; margin-bottom: 14px; max-width: 64ch; }
+.recog-text .btn svg { width: 16px; height: 16px; }
+.recog-thumb { display: block; padding: 0; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: #FFFFFF; cursor: zoom-in; box-shadow: var(--shadow); transform: rotate(1.5deg); transition: transform .2s, box-shadow .2s; }
+.recog-thumb:hover { transform: rotate(0) translateY(-3px); box-shadow: var(--shadow-lg); }
+.recog-thumb img { width: 100%; height: auto; display: block; }
+.modal.letter { width: min(780px, calc(100% - 32px)); }
+.modal .modal-date { color: var(--ink-2); font-size: 14.5px; margin: -4px 0 16px; }
+.letter-img { width: 100%; height: auto; display: block; border: 1px solid var(--line); border-radius: 8px; background: #FFFFFF; }
 
 /* detalhes do projeto */
 .modal { width: min(680px, calc(100% - 32px)); max-height: calc(100vh - 40px); overflow-y: auto; padding: 30px 30px 26px; color: var(--text); box-shadow: var(--shadow-lg); }
@@ -302,6 +311,10 @@ svg { width: 18px; height: 18px; flex: 0 0 auto; fill: none; stroke: currentColo
   position: relative; overflow: hidden; text-align: center; padding: 56px clamp(22px, 5vw, 56px) 48px;
   background: var(--navy-2); border-color: var(--navy-line); color: var(--on-navy);
 }
+.contact-photo { position: relative; width: 156px; margin: 0 auto 34px; }
+.contact-photo img { display: block; width: 156px; height: 156px; border-radius: 50%; object-fit: cover; border: 3px solid var(--accent); box-shadow: 0 0 0 7px rgba(217, 164, 65, .14), 0 22px 44px -18px rgba(0, 0, 0, .65); }
+.contact-open { position: absolute; left: 50%; bottom: -14px; transform: translateX(-50%); display: inline-flex; align-items: center; gap: 7px; white-space: nowrap;
+  background: var(--surface); color: var(--ink); border: 1px solid var(--line); border-radius: 999px; padding: 6px 13px; font-size: 13px; font-weight: 600; box-shadow: 0 8px 20px -10px rgba(0, 0, 0, .5); }
 .contact .eyebrow { justify-content: center; color: var(--accent); }
 .contact .eyebrow::after { display: none; }
 .contact .h2 { color: #FFFFFF; }
@@ -374,6 +387,10 @@ svg { width: 18px; height: 18px; flex: 0 0 auto; fill: none; stroke: currentColo
   .fact { grid-template-columns: minmax(0, 1fr); gap: 4px; }
   .project-body { padding: 18px 18px 20px; }
   .modal { padding: 24px 20px; }
+  .recognition { grid-template-columns: minmax(0, 1fr); }
+  .recog-thumb { max-width: 220px; justify-self: center; order: -1; }
+  .contact-photo, .contact-photo img { width: 128px; height: 128px; }
+  .contact-photo { margin-bottom: 30px; }
   .degree { grid-template-columns: minmax(0, 1fr); }
   .status { grid-row: auto; grid-column: 1; justify-self: start; margin-top: 8px; }
 }
