@@ -50,7 +50,7 @@
   /* ---------- partes da página ---------- */
   function navLinks(c) {
     return [
-      ['#sobre', c.nav.about], ['#competencias', c.nav.skills], ['#projetos', c.nav.projects],
+      ['#sobre', c.nav.about], ['#competencias', c.nav.skills], ['#projetos', c.nav.projects], ['#ia', c.nav.ai],
       ['#experiencia', c.nav.experience], ['#formacao', c.nav.education], ['#certificacoes', c.nav.certs], ['#contato', c.nav.contact],
     ].map(function (l) { return '<a href="' + l[0] + '">' + esc(l[1]) + '</a>'; }).join('');
   }
@@ -181,9 +181,32 @@
         '<h3>' + esc(p.title) + '</h3>' +
         '<div class="question"><small>' + esc(P.context) + '</small>' + esc(p.context) + '</div>' +
         '<p class="desc"><b>' + esc(P.result) + ':</b> ' + esc(p.result) + '</p>' +
+        (p.ai ? aiBox(P.ai, p.ai) : '') +
         '<ul class="chips">' + p.tags.map(function (t) { return '<li class="chip">' + esc(t) + '</li>'; }).join('') + '</ul>' +
         '<div class="project-foot"><button type="button" class="btn small" data-details="' + p.id + '" aria-haspopup="dialog">' + esc(P.details) + '</button></div>' +
       '</div></article>';
+  }
+
+  // quadro "Com IA, hoje eu faria": proposta de aplicação, não um resultado obtido
+  var SPARK = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5 13.9 9l5.6 1.9-5.6 1.9L12 18.5l-1.9-5.7L4.5 11l5.6-2Z"/><path d="M18.5 3v3M17 4.5h3"/></svg>';
+  var CHECK = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>';
+  function aiBox(label, text) {
+    return '<div class="ai-box"><small>' + SPARK + esc(label) + '</small><p>' + esc(text) + '</p></div>';
+  }
+
+  function aiPath(c) {
+    var a = c.ai;
+    return '<section id="ia" class="section" aria-labelledby="t-ia"><div class="wrap reveal">' +
+      sectionHead('05', a.title, a.lead, 't-ia') +
+      '<ol class="ai-path">' + a.steps.map(function (x) {
+        return '<li class="' + (x.done ? 'done' : 'next') + '">' +
+          '<span class="ai-dot" aria-hidden="true">' + (x.done ? CHECK : SPARK) + '</span>' +
+          '<div class="card ai-step"><div class="ai-step-head"><small>' + esc(x.when) + '</small>' +
+            '<em class="status ' + (x.done ? 'done' : 'upcoming') + '">' + esc(x.done ? a.done : a.next) + '</em></div>' +
+            '<h3>' + esc(x.title) + '</h3><p>' + esc(x.text) + '</p></div>' +
+        '</li>';
+      }).join('') + '</ol>' +
+    '</div></section>';
   }
 
   function projectsGrid(c) {
@@ -217,13 +240,14 @@
       '<div class="question"><small>' + esc(P.context) + '</small>' + esc(p.context) + '</div>' +
       '<h4>' + esc(P.action) + '</h4><p>' + esc(p.action) + '</p>' +
       '<h4>' + esc(P.result) + '</h4><p>' + esc(p.result) + '</p>' +
+      (p.ai ? aiBox(P.ai, p.ai) : '') +
       '<ul class="chips">' + p.tags.map(function (t) { return '<li class="chip">' + esc(t) + '</li>'; }).join('') + '</ul>';
   }
 
   function experience(c) {
     var e = c.experience, VIS = 3, hidden = Math.max(0, e.items.length - VIS);
     return '<section id="experiencia" class="section" aria-labelledby="t-exp"><div class="wrap reveal">' +
-      sectionHead('05', e.title, e.lead, 't-exp') +
+      sectionHead('06', e.title, e.lead, 't-exp') +
       '<ol class="exp-list collapsible always">' + e.items.map(function (x, i) {
         return '<li class="card exp' + (i >= VIS ? ' extra' : '') + '">' +
           '<div class="exp-head"><h3>' + esc(x.role) + (x.sub ? '<span class="role-sub">' + esc(x.sub) + '</span>' : '') + '</h3><small>' + esc(x.period) + '</small></div>' +
@@ -238,7 +262,7 @@
   function education(c) {
     var e = c.education;
     return '<section id="formacao" class="section" aria-labelledby="t-form"><div class="wrap reveal">' +
-      sectionHead('06', e.title, '', 't-form') +
+      sectionHead('07', e.title, '', 't-form') +
       '<div class="card degrees">' + e.degrees.map(function (d) {
         return '<div class="degree"><b>' + esc(d.course) + '</b><span>' + esc(d.school) + '</span>' +
           (d.period ? '<small>' + esc(d.period) + '</small>' : '') +
@@ -262,7 +286,7 @@
     var s = c.certs, k = s.courses;
     var total = k.groups.reduce(function (n, g) { return n + g.items.length; }, 0);
     return '<section id="certificacoes" class="section" aria-labelledby="t-cert"><div class="wrap reveal">' +
-      sectionHead('07', s.title, s.lead, 't-cert') +
+      sectionHead('08', s.title, s.lead, 't-cert') +
       '<div class="card certs">' + s.groups.map(function (g) {
         return '<div class="cert-group"><h3>' + esc(g.title) + '<span>' + g.items.length + '</span></h3>' + certList(g.items) + '</div>';
       }).join('') + '</div>' +
@@ -278,7 +302,7 @@
     var k = c.contact;
     return '<section id="contato" class="section" aria-labelledby="t-cont"><div class="wrap reveal">' +
       '<div class="card contact">' +
-        '<p class="eyebrow">08</p><h2 class="h2" id="t-cont">' + esc(k.title) + '</h2>' +
+        '<p class="eyebrow">09</p><h2 class="h2" id="t-cont">' + esc(k.title) + '</h2>' +
         '<p class="contact-text">' + esc(k.text) + '</p>' +
         '<div class="contact-actions"><div class="contact-main">' +
           '<a class="btn primary" href="' + LINKS.whatsapp + '"' + ext(c, k.whats + ' ' + LINKS.whatsappText) + '>' + I.chat + esc(k.whats) + '</a>' +
@@ -307,7 +331,7 @@
     var y = window.scrollY;
     document.documentElement.lang = state.lang === 'pt' ? 'pt-BR' : 'en';
     document.title = c.meta.title;
-    app.innerHTML = header(c) + '<main id="conteudo">' + hero(c) + about(c) + value(c) + skills(c) + projects(c) +
+    app.innerHTML = header(c) + '<main id="conteudo">' + hero(c) + about(c) + value(c) + skills(c) + projects(c) + aiPath(c) +
       experience(c) + education(c) + certs(c) + contact(c) + '</main>' + footer(c);
     bind(c);
     if (y) window.scrollTo(0, y);
@@ -442,7 +466,7 @@
         });
       });
     }, { rootMargin: '-45% 0px -50% 0px' });
-    ['sobre', 'competencias', 'projetos', 'experiencia', 'formacao', 'certificacoes', 'contato'].forEach(function (id) {
+    ['sobre', 'competencias', 'projetos', 'ia', 'experiencia', 'formacao', 'certificacoes', 'contato'].forEach(function (id) {
       var s = document.getElementById(id); if (s) io.observe(s);
     });
   }

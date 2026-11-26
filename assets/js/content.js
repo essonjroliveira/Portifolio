@@ -17,12 +17,12 @@ window.CONTENT = {
     meta: { title: 'Edson Junior de Oliveira | Engenharia de Processos e Melhoria Contínua' },
     nav: {
       about: 'Sobre', skills: 'Competências', projects: 'Projetos', experience: 'Experiência',
-      education: 'Formação', certs: 'Certificações', contact: 'Contato',
+      ai: 'IA', education: 'Formação', certs: 'Certificações', contact: 'Contato',
       menu: 'Menu', close: 'Fechar menu', theme: 'Tema', system: 'Sistema', light: 'Claro', dark: 'Escuro', language: 'Idioma',
     },
     ui: { skip: 'Pular para o conteúdo', more: 'Ver mais', less: 'Ver menos', newTab: '(abre em nova aba)', top: 'Voltar ao topo' },
     hero: {
-      kicker: 'Engenharia de Processos | Melhoria Contínua | Excelência Operacional',
+      kicker: 'Engenharia de Processos e Melhoria Contínua, com dados e IA aplicados à operação',
       title: 'Do chão de fábrica à melhoria contínua.',
       intro: 'Sou Edson Junior de Oliveira, Engenheiro de Produção com mais de 11 anos na fabricação de tubos flexíveis para Óleo & Gás. Fui da operação de máquinas à liderança de equipes e aplico Lean, SMED e Trabalho Padronizado para reduzir setup, tempo de ciclo e desperdício.',
       ctaCv: 'Baixar currículo',
@@ -81,15 +81,15 @@ window.CONTENT = {
         },
         {
           title: 'Métodos e ferramentas em formação complementar',
-          items: ['Six Sigma (DMAIC), Green Belt', 'BPMN 2.0 e modelagem com Bizagi', 'Power BI', 'Excel avançado e Power Query', 'MS Project'],
+          items: ['Six Sigma (DMAIC), Green Belt', 'BPMN 2.0 e modelagem com Bizagi', 'Power BI', 'Excel avançado e Power Query', 'MS Project', 'IA generativa e engenharia de prompts', 'Análise de dados com IA'],
           note: { label: 'Origem', text: 'cursos e certificações de 2025 e 2026.' },
         },
       ],
     },
     projects: {
       title: 'Projetos e realizações',
-      lead: 'Quatro contribuições na NOV Flexibles, com o contexto, o que fiz e o resultado.',
-      context: 'Contexto', action: 'O que fiz', result: 'Resultado',
+      lead: 'Quatro contribuições na NOV Flexibles, com o contexto, o que fiz e o resultado. Em cada uma, mostro também como eu aplicaria IA hoje.',
+      context: 'Contexto', action: 'O que fiz', result: 'Resultado', ai: 'Com IA, hoje eu faria',
       details: 'Detalhes', close: 'Fechar', more: 'Ver mais projetos', less: 'Ver menos projetos',
       recognition: { title: 'Reconhecimento em Melhoria Contínua', date: 'novembro de 2021' },
       items: [
@@ -102,6 +102,7 @@ window.CONTENT = {
           action: 'Idealização e aplicação de uma metodologia própria de cálculo, baseada em SMED.',
           result: 'Tempo de setup 50% menor e eficiência da linha quadruplicada. Projeto reconhecido pela Diretoria e replicado na planta da Dinamarca.',
           tags: ['SMED', 'Setup', 'Eficiência de linha'],
+          ai: 'Usar IA para classificar as atividades da cronoanálise em internas e externas, comparar as trocas entre turnos e gerar automaticamente o checklist padrão da troca.',
         },
         {
           id: 'ciclo',
@@ -112,6 +113,7 @@ window.CONTENT = {
           action: 'Participação no programa, com implantação do Trabalho Padronizado em 7 meses.',
           result: 'Tempo de ciclo das operações 30% menor.',
           tags: ['Trabalho Padronizado', 'Lean Manufacturing', 'Tempo de ciclo'],
+          ai: 'Usar IA para transformar a explicação do operador, em texto ou áudio, no rascunho da folha de Trabalho Padronizado, e para apontar nos registros de tempo as operações que mais variam.',
         },
         {
           id: 'desperdicio',
@@ -122,6 +124,7 @@ window.CONTENT = {
           action: 'Desenvolvimento e validação do projeto em projetos-piloto, com cerca de 120 bobinas cada.',
           result: 'Sobra reduzida para 40 m por bobina, com economia expressiva de insumos.',
           tags: ['Desperdício', 'Projeto-piloto', 'Matéria-prima'],
+          ai: 'Usar IA para analisar o histórico de sobra por bobina, encontrar padrões por máquina, turno e tipo de fio, e apoiar a definição do comprimento ideal em cada caso.',
         },
         {
           id: 'metas',
@@ -132,6 +135,7 @@ window.CONTENT = {
           action: 'Criação de uma metodologia própria para definir metas e delegar conforme a senioridade.',
           result: 'Produtividade 15% maior. O modelo foi adotado como padrão pela gerência de produção.',
           tags: ['Gestão por metas', 'Delegação', 'Produtividade'],
+          ai: 'Usar IA para montar a matriz de habilidades a partir dos registros de treinamento, sugerir a alocação dos postos por turno e gerar o relatório de metas automaticamente.',
         },
       ],
     },
@@ -176,6 +180,17 @@ window.CONTENT = {
             "Operação de máquinas industriais, medições com instrumentos de precisão (paquímetro, micrômetro) e suporte a soldas MIG/MAG/TIG.",
           ],
         },
+      ],
+    },
+    ai: {
+      title: 'IA aplicada a processos',
+      lead: 'Estou unindo a experiência de chão de fábrica com dados e inteligência artificial. Esta é a minha trilha: o que já concluí e os próximos passos.',
+      done: 'Concluído', next: 'Próximo passo',
+      steps: [
+        { when: '2026', title: 'Fundamentos de IA generativa', text: 'Fundamentos da IA Generativa e Engenharia de Prompts (Asimov Academy), Claude Impressionador (Hashtag Treinamentos) e ChatGPT Work e Plus (Udemy).', done: true },
+        { when: '2026', title: 'Dados com IA', text: 'Análise de dados com IA (Asimov Academy), com Excel avançado, Power Query e Power BI para organizar e analisar indicadores.', done: true },
+        { when: 'Janeiro de 2027', title: 'Pós-graduação em Data Science e Machine Learning com IA', text: 'XP Educação. Modelos de dados e aprendizado de máquina para prever e reduzir perdas no processo.', done: false },
+        { when: 'Em construção', title: 'Laboratório de IA aplicada', text: 'Projetos demonstrativos, com dados simulados, de IA aplicada a processos: relatório de produção automático, apoio à análise de causa raiz e geração de procedimentos padrão.', done: false },
       ],
     },
     education: {
@@ -226,7 +241,7 @@ window.CONTENT = {
             { name: "Engenharia de Prompts", issuer: "Asimov Academy", date: "2026" },
             { name: "Análise de dados com IA", issuer: "Asimov Academy", date: "2026" },
             { name: "Formação em ChatGPT Work e ChatGPT Plus", issuer: "Udemy", date: "2026" },
-            { name: "Claude Impressionador", issuer: "Hashtag Treinamentos" },
+            { name: "Claude Impressionador", issuer: "Hashtag Treinamentos", date: "2026" },
           ],
         },
       ],
@@ -266,12 +281,12 @@ window.CONTENT = {
     meta: { title: 'Edson Junior de Oliveira | Process Engineering and Continuous Improvement' },
     nav: {
       about: 'About', skills: 'Skills', projects: 'Projects', experience: 'Experience',
-      education: 'Education', certs: 'Certifications', contact: 'Contact',
+      ai: 'AI', education: 'Education', certs: 'Certifications', contact: 'Contact',
       menu: 'Menu', close: 'Close menu', theme: 'Theme', system: 'System', light: 'Light', dark: 'Dark', language: 'Language',
     },
     ui: { skip: 'Skip to content', more: 'Show more', less: 'Show less', newTab: '(opens in a new tab)', top: 'Back to top' },
     hero: {
-      kicker: 'Process Engineering | Continuous Improvement | Operational Excellence',
+      kicker: 'Process Engineering and Continuous Improvement, with data and AI applied to operations',
       title: 'From the shop floor to continuous improvement.',
       intro: "I'm Edson Junior de Oliveira, a Production Engineer with more than 11 years in flexible pipe manufacturing for Oil & Gas. I went from machine operation to team leadership, and I apply Lean, SMED and Standardized Work to cut setup time, cycle time and waste.",
       ctaCv: 'Download résumé',
@@ -337,8 +352,8 @@ window.CONTENT = {
     },
     projects: {
       title: 'Projects and achievements',
-      lead: 'Four contributions at NOV Flexibles, with the context, what I did and the result.',
-      context: 'Context', action: 'What I did', result: 'Result',
+      lead: 'Four contributions at NOV Flexibles, with the context, what I did and the result. For each one, I also show how I would apply AI today.',
+      context: 'Context', action: 'What I did', result: 'Result', ai: 'With AI, today I would',
       details: 'Details', close: 'Close', more: 'Show more projects', less: 'Show fewer projects',
       recognition: { title: 'Continuous Improvement recognition', date: 'November 2021' },
       items: [
@@ -351,6 +366,7 @@ window.CONTENT = {
           action: 'Designed and applied my own calculation method, based on SMED.',
           result: 'Setup time cut by 50% and line efficiency quadrupled. The project was recognized by the Board and replicated at the Denmark plant.',
           tags: ['SMED', 'Setup', 'Line efficiency'],
+          ai: 'Use AI to classify time-study activities as internal or external, compare changeovers across shifts and automatically generate the standard changeover checklist.',
         },
         {
           id: 'ciclo',
@@ -361,6 +377,7 @@ window.CONTENT = {
           action: 'Took part in the program, implementing Standardized Work over 7 months.',
           result: 'Operations cycle time cut by 30%.',
           tags: ['Standardized Work', 'Lean Manufacturing', 'Cycle time'],
+          ai: 'Use AI to turn the operator\'s explanation, in text or audio, into a draft Standardized Work sheet, and to flag the operations with the most variation in the time records.',
         },
         {
           id: 'desperdicio',
@@ -371,6 +388,7 @@ window.CONTENT = {
           action: 'Developed and validated the project in pilot runs of about 120 coils each.',
           result: 'Leftover cut to 40 m per coil, with significant material savings.',
           tags: ['Waste', 'Pilot project', 'Raw material'],
+          ai: 'Use AI to analyze the leftover history per coil, find patterns by machine, shift and wire type, and support setting the ideal length for each case.',
         },
         {
           id: 'metas',
@@ -381,6 +399,7 @@ window.CONTENT = {
           action: 'Created my own method to set targets and delegate according to seniority.',
           result: 'Productivity up 15%. Production management adopted the model as the standard.',
           tags: ['Management by targets', 'Delegation', 'Productivity'],
+          ai: 'Use AI to build the skills matrix from training records, suggest station allocation per shift and generate the targets report automatically.',
         },
       ],
     },
@@ -425,6 +444,17 @@ window.CONTENT = {
             "Operated industrial machines, took measurements with precision instruments (calipers, micrometers) and supported MIG/MAG/TIG welding.",
           ],
         },
+      ],
+    },
+    ai: {
+      title: 'AI applied to processes',
+      lead: "I'm bringing my shop floor experience together with data and artificial intelligence. This is my path: what I've completed and what comes next.",
+      done: 'Completed', next: 'Next step',
+      steps: [
+        { when: '2026', title: 'Generative AI fundamentals', text: 'Generative AI Fundamentals and Prompt Engineering (Asimov Academy), Claude Impressionador (Hashtag Treinamentos) and ChatGPT Work and Plus (Udemy).', done: true },
+        { when: '2026', title: 'Data with AI', text: 'Data analysis with AI (Asimov Academy), with advanced Excel, Power Query and Power BI to organize and analyze KPIs.', done: true },
+        { when: 'January 2027', title: 'Postgraduate program in Data Science and Machine Learning with AI', text: 'XP Educação. Data models and machine learning to predict and reduce process losses.', done: false },
+        { when: 'In progress', title: 'Applied AI lab', text: 'Demonstration projects, with simulated data, of AI applied to processes: automatic production report, root cause analysis support and standard procedure generation.', done: false },
       ],
     },
     education: {
@@ -475,7 +505,7 @@ window.CONTENT = {
             { name: "Prompt engineering", issuer: "Asimov Academy", date: "2026" },
             { name: "Data analysis with AI", issuer: "Asimov Academy", date: "2026" },
             { name: "ChatGPT Work and ChatGPT Plus training", issuer: "Udemy", date: "2026" },
-            { name: "Claude Impressionador", issuer: "Hashtag Treinamentos" },
+            { name: "Claude Impressionador", issuer: "Hashtag Treinamentos", date: "2026" },
           ],
         },
       ],

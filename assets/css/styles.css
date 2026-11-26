@@ -139,6 +139,7 @@ svg { width: 18px; height: 18px; flex: 0 0 auto; fill: none; stroke: currentColo
 .hero-grid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr); gap: 56px; align-items: center; }
 .kicker { flex-wrap: wrap; gap: 6px 12px; font-size: 14px; letter-spacing: .01em; }
 .kicker .kg { white-space: nowrap; }
+.kicker .kg:only-child { white-space: normal; max-width: 62ch; line-height: 1.45; }
 .kicker .ksep { color: var(--accent); }
 .hero h1 { font: 700 clamp(2.5rem, 5.6vw, 4.2rem)/1.03 var(--display); letter-spacing: -.035em; margin: 6px 0 22px; }
 .hero h1 em { font-style: normal; color: var(--accent-text); }
@@ -384,4 +385,32 @@ svg { width: 18px; height: 18px; flex: 0 0 auto; fill: none; stroke: currentColo
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .reveal.pre { opacity: 1; transform: none; }
+}
+
+/* ---------- IA aplicada a processos ---------- */
+.ai-box { border: 1px dashed color-mix(in srgb, var(--accent) 70%, transparent); background: color-mix(in srgb, var(--accent) 7%, var(--surface)); border-radius: 10px; padding: 11px 14px 12px; }
+.ai-box small { display: flex; align-items: center; gap: 6px; font-size: 11.5px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--accent-text); margin-bottom: 4px; }
+.ai-box small svg { width: 15px; height: 15px; }
+.ai-box p { font-size: 14.5px; color: var(--ink); line-height: 1.5; margin: 0; }
+.modal .ai-box { margin-top: 18px; }
+.ai-path { position: relative; display: grid; gap: 14px; margin-top: 28px; padding-left: 46px; }
+.ai-path::before { content: ""; position: absolute; left: 17px; top: 18px; bottom: 18px; width: 2px; background: linear-gradient(to bottom, var(--accent) 0 50%, var(--line) 50% 100%); }
+.ai-path li { position: relative; }
+.ai-dot { position: absolute; left: -46px; top: 16px; width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center; background: var(--surface); border: 2px solid var(--line); color: var(--ink-2); }
+.ai-path li.done .ai-dot { background: var(--accent); border-color: var(--accent); color: #141311; }
+.ai-path li.next .ai-dot { border-style: dashed; border-color: var(--accent); color: var(--accent-text); }
+.ai-dot svg { width: 17px; height: 17px; }
+.ai-step { padding: 18px 22px; transition: transform .2s, box-shadow .2s; }
+.ai-step:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+.ai-step-head { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 4px; }
+.ai-step-head small { font-size: 13px; font-weight: 700; color: var(--accent-text); font-variant-numeric: tabular-nums; }
+.ai-step-head .status { grid-row: auto; grid-column: auto; }
+.ai-step h3 { font-size: 18px; margin-bottom: 4px; }
+.ai-step p { color: var(--ink-2); font-size: 15px; }
+@media (max-width: 560px) {
+  .ai-path { padding-left: 38px; }
+  .ai-path::before { left: 13px; }
+  .ai-dot { left: -38px; width: 28px; height: 28px; }
+  .ai-dot svg { width: 14px; height: 14px; }
+  .ai-step { padding: 16px; }
 }
