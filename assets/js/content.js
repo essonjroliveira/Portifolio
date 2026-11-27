@@ -5,6 +5,7 @@
 window.LINKS = {
   whatsapp: 'https://wa.me/5522999208300',
   whatsappText: '(22) 99920-8300',
+  whatsappTextEn: '+55 (22) 99920-8300',
   linkedin: 'https://www.linkedin.com/in/edson-junior-de-oliveira/',
   linkedinText: 'linkedin.com/in/edson-junior-de-oliveira',
   email: 'edsonjr.oliveira@yahoo.com.br',

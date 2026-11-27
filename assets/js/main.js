@@ -98,7 +98,7 @@
           '<p class="hero-intro">' + esc(h.intro) + '</p>' +
           '<div class="hero-actions">' +
             '<a class="btn primary" href="' + cvLink() + '" download>' + I.download + esc(h.ctaCv) + '</a>' +
-            '<a class="btn" href="' + LINKS.whatsapp + '"' + ext(c, h.ctaWhats + ' ' + LINKS.whatsappText) + '>' + I.chat + esc(h.ctaWhats) + '</a>' +
+            '<a class="btn" href="' + LINKS.whatsapp + '"' + ext(c, h.ctaWhats + ' ' + whatsText()) + '>' + I.chat + esc(h.ctaWhats) + '</a>' +
             '<a class="btn" href="' + LINKS.linkedin + '"' + ext(c, 'LinkedIn') + '>' + I.profile + esc(h.ctaLinkedin) + '</a>' +
           '</div>' +
         '</div>' +
@@ -296,6 +296,7 @@
   }
 
   // currículo no idioma da página
+  function whatsText() { return state.lang === 'en' ? LINKS.whatsappTextEn : LINKS.whatsappText; }
   function cvLink() { return state.lang === 'en' ? LINKS.curriculoEn : LINKS.curriculo; }
 
   function certList(items) {
@@ -332,12 +333,12 @@
         '<p class="eyebrow">09</p><h2 class="h2" id="t-cont">' + esc(k.title) + '</h2>' +
         '<p class="contact-text">' + esc(k.text) + '</p>' +
         '<div class="contact-actions"><div class="contact-main">' +
-          '<a class="btn primary" href="' + LINKS.whatsapp + '"' + ext(c, k.whats + ' ' + LINKS.whatsappText) + '>' + I.chat + esc(k.whats) + '</a>' +
+          '<a class="btn primary" href="' + LINKS.whatsapp + '"' + ext(c, k.whats + ' ' + whatsText()) + '>' + I.chat + esc(k.whats) + '</a>' +
           '<a class="btn ghost" href="' + LINKS.linkedin + '"' + ext(c, 'LinkedIn') + '>' + I.profile + 'LinkedIn</a>' +
           '<a class="btn ghost" href="mailto:' + LINKS.email + '">' + I.mail + esc(k.email) + '</a>' +
           '<a class="btn ghost" href="' + cvLink() + '" download>' + I.download + esc(k.cv) + '</a>' +
         '</div></div>' +
-        '<p class="contact-lines"><span>WhatsApp ' + esc(LINKS.whatsappText) + '</span><span>' + esc(LINKS.linkedinText) + '</span><span>' + esc(LINKS.email) + '</span></p>' +
+        '<p class="contact-lines"><span>WhatsApp ' + esc(whatsText()) + '</span><span>' + esc(LINKS.linkedinText) + '</span><span>' + esc(LINKS.email) + '</span></p>' +
         '<div class="contact-avail"><h3>' + esc(k.availabilityTitle) + '</h3><ul class="chips">' +
           k.availability.map(function (a) { return '<li class="chip">' + esc(a) + '</li>'; }).join('') +
         '</ul><p class="contact-loc">' + I.pin + esc(k.location) + '</p></div>' +
