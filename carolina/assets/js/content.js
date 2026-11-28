@@ -164,6 +164,19 @@ window.CONTENT = {
     ],
   },
 
+  recommendations: {
+    title: 'Recomendações',
+    lead: 'Pessoas que já trabalharam ou estudaram com a Carolina recomendam o trabalho dela.',
+    items: [
+      { name: 'Pedro', topic: 'Trabalhou com a Carolina', text: 'Eu achava que sabia de Excel até conhecer a Carol. Excelente profissional com amplo conhecimento em Excel e VBA. Trabalhamos juntos em 2015 e algumas das planilhas referentes a dados e controle de estoque possuíam automatizações criadas por meio do VBA, implementadas pela Carol. Ela seguiu outro rumo, mas a planilha automatizada por ela segue conosco, facilitando nossa análise de dados e controle sobre os materiais da empresa. Possui uma excelente didática e está pronta para te explicar quantas vezes for necessário.' },
+      { name: 'Mayara', topic: 'Excel e análise de dados', text: 'Carolina é uma profissional incrível, apresentou domínio de conteúdos e um arcabouço de conhecimentos que me ajudou a resolver demandas no Excel tanto com dados quantitativos como qualitativos. É uma professora atenta e muito dedicada, super recomendo!' },
+      { name: 'Ingrid', topic: 'Excel do zero', text: 'Eu sempre tive dificuldade com Excel e achava que nunca ia conseguir aprender direito. Com as aulas dela isso mudou bastante. Ela explica com muita clareza, vai no ritmo do aluno e sempre traz exemplos práticos que ajudam muito a entender. Recomendo muito para quem quer aprender de forma mais tranquila e prática, sem sofrimento.' },
+      { name: 'Juliana', topic: 'Excel no trabalho', text: 'A melhor! A Carol me deu aulas quando eu mais precisei usar no serviço, mas não sabia nada, me salvou. Super indico de olhos fechados!' },
+      { name: 'Daniela Machado', topic: 'Excel', text: 'Gostaria de agradecer a Professora Carol e deixar minha avaliação. Eu tinha bastante dificuldade em aprender Excel e, mesmo assim, ela teve (…)' },
+      { name: 'Noelle', topic: 'Aulas particulares', text: 'Agradeço pela explicação, pela paciência e pela oportunidade de aprender algo novo. Muito obrigada! Foi muito válido e, com certeza, recomendo super!' },
+    ],
+  },
+
   price: {
     title: 'Valores',
     lead: 'Simples e sem surpresa. A primeira aula é por minha conta, para você conhecer o método.',

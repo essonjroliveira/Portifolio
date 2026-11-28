@@ -575,3 +575,10 @@ svg { width: 18px; height: 18px; flex: 0 0 auto; fill: none; stroke: currentColo
 .contact-photo .photo-ph { width: 156px; height: 156px; border-radius: 50%; }
 @media (max-width: 520px) { .contact-photo .photo-ph { width: 128px; height: 128px; } }
 .contact-loc { width: fit-content; max-width: 100%; margin-left: auto; margin-right: auto; text-align: left; }
+
+/* recomendações: mesmo cartão das avaliações, sem estrelas e com o avatar em dourado */
+.recs { margin-top: 56px; padding-top: 40px; border-top: 1px solid var(--line-2); }
+.recs .h3 { font: 700 clamp(1.5rem, 2.6vw, 1.9rem)/1.15 var(--display); letter-spacing: -.02em; }
+.recs-lead { color: var(--ink-2); font-size: 16.5px; margin: 8px 0 0; max-width: 64ch; }
+.review.rec .review-head { grid-template-columns: auto minmax(0, 1fr); }
+.review.rec .avatar { background: var(--accent); color: var(--accent-ink); }

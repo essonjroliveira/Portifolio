@@ -186,11 +186,11 @@
     '</div></section>';
   }
 
-  function reviewCard(x, extra) {
-    return '<figure class="card review' + (extra ? ' extra' : '') + '">' +
+  function reviewCard(x, extra, rec) {
+    return '<figure class="card review' + (extra ? ' extra' : '') + (rec ? ' rec' : '') + '">' +
       '<div class="review-head"><span class="avatar" aria-hidden="true">' + esc(x.name.charAt(0)) + '</span>' +
         '<figcaption><b>' + esc(x.name) + '</b><small>' + esc(x.topic) + '</small></figcaption>' +
-        '<span class="review-stars" aria-label="5 estrelas">' + stars(5) + '</span></div>' +
+        (rec ? '' : '<span class="review-stars" aria-label="5 estrelas">' + stars(5) + '</span>') + '</div>' +
       '<blockquote>' + esc(x.text) + '</blockquote></figure>';
   }
 
@@ -205,6 +205,8 @@
       '</div>' +
       '<div class="review-grid collapsible always">' + R.items.map(function (x, i) { return reviewCard(x, i >= VIS); }).join('') + '</div>' +
       (hidden > 0 ? '<button type="button" class="btn more-btn always" aria-expanded="false" data-more="' + hidden + '"><span>' + esc(R.more) + ' (' + hidden + ')</span>' + I.chevron + '</button>' : '') +
+      '<div class="recs"><h3 class="h3">' + esc(c.recommendations.title) + '</h3><p class="recs-lead">' + esc(c.recommendations.lead) + '</p>' +
+        '<div class="review-grid">' + c.recommendations.items.map(function (x) { return reviewCard(x, false, true); }).join('') + '</div></div>' +
     '</div></section>';
   }
 
