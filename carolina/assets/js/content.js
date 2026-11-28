@@ -12,12 +12,12 @@ window.LINKS = {
   email: 'carolinaluiza.6@gmail.com',
 };
 
-/* Fotos: quando chegarem, coloque os arquivos em assets/img e preencha os nomes abaixo.
-   Enquanto estiverem vazios, a página mostra um espaço reservado no lugar de cada foto. */
+/* Fotos: cada uma tem versão .jpg e .webp em assets/img.
+   Deixe o nome vazio ('') para mostrar um espaço reservado no lugar da foto. */
 window.PHOTOS = {
-  hero: '',          // ex.: 'assets/img/carolina-capa.jpg'  (retrato vertical 4:5)
-  contact: '',       // ex.: 'assets/img/carolina-contato.jpg' (quadrada)
-  certificate: '',   // ex.: 'assets/img/certificado-google.jpg'
+  hero: 'carolina-capa',               // retrato 4:5, arquivos -600 e -900
+  contact: 'carolina-contato',         // quadrada, arquivos -320 e -640
+  certificate: 'certificado-google',   // certificado inteiro e -thumb
 };
 
 window.CONTENT = {

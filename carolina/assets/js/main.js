@@ -38,10 +38,15 @@
   function ext(label) { return ' target="_blank" rel="noopener" aria-label="' + esc(label + ' ' + c.ui.newTab) + '"'; }
   function book(cls, label) { return '<a class="btn ' + (cls || '') + '" href="' + LINKS.whatsapp + '"' + ext(label + ', WhatsApp') + '>' + I.chat + esc(label) + '</a>'; }
 
-  // foto real quando houver; até lá, um espaço reservado com as iniciais
-  function photo(src, alt, cls) {
-    if (src) return '<img class="' + cls + '" src="' + esc(src) + '" alt="' + esc(alt) + '" decoding="async">';
-    return '<div class="' + cls + ' photo-ph" role="img" aria-label="' + esc(c.ui.photoSoon) + '"><span>CA</span><small>' + esc(c.ui.photoSoon) + '</small></div>';
+  // foto real quando houver (webp com jpg de reserva); até lá, um espaço reservado com as iniciais
+  var SIZES = { 'photo-img': [600, 900, '(max-width: 860px) 260px, 380px', 900, 1125], 'contact-img': [320, 640, null, 160, 160] };
+  function photo(name, alt, cls) {
+    if (!name) return '<div class="' + cls + ' photo-ph" role="img" aria-label="' + esc(c.ui.photoSoon) + '"><span>CA</span><small>' + esc(c.ui.photoSoon) + '</small></div>';
+    var z = SIZES[cls], b = 'assets/img/' + name + '-', lazy = cls === 'contact-img' ? ' loading="lazy"' : '';
+    var set = function (ext) { return z[2] ? b + z[0] + ext + ' ' + z[0] + 'w, ' + b + z[1] + ext + ' ' + z[1] + 'w' : b + z[0] + ext + ' 1x, ' + b + z[1] + ext + ' 2x'; };
+    var sizes = z[2] ? ' sizes="' + z[2] + '"' : '';
+    return '<picture><source type="image/webp" srcset="' + set('.webp') + '"' + sizes + '>' +
+      '<img class="' + cls + '" src="' + b + z[1] + '.jpg" srcset="' + set('.jpg') + '"' + sizes + ' width="' + z[3] + '" height="' + z[4] + '" alt="' + esc(alt) + '" decoding="async"' + lazy + '></picture>';
   }
 
   /* ---------- partes da página ---------- */
@@ -128,7 +133,8 @@
 
   function certificate(r) {
     var has = !!PHOTOS.certificate;
-    var thumb = has ? '<img src="' + esc(PHOTOS.certificate) + '" alt="' + esc(r.alt) + '" loading="lazy" decoding="async">'
+    var b = 'assets/img/' + PHOTOS.certificate;
+    var thumb = has ? '<picture><source type="image/webp" srcset="' + b + '-thumb.webp"><img src="' + b + '-thumb.jpg" width="480" height="345" alt="' + esc(r.alt) + '" loading="lazy" decoding="async"></picture>'
       : '<span class="cert-ph">' + I.spark + '<small>' + esc(r.soon) + '</small></span>';
     return '<div class="recognition card">' +
       '<div class="recog-text"><div class="recog-head"><b>' + esc(r.title) + '</b><span>' + esc(r.date) + '</span></div>' +
@@ -256,7 +262,7 @@
       var r = c.about.certificate;
       modal.innerHTML = '<button type="button" class="modal-close" aria-label="' + esc(c.ui.close) + '">' + I.close + '</button>' +
         '<h3 id="cert-title">' + esc(r.title) + '</h3><p class="modal-date">' + esc(r.date) + '</p>' +
-        '<img class="letter-img" src="' + esc(PHOTOS.certificate) + '" alt="' + esc(r.alt) + '">';
+        '<picture><source type="image/webp" srcset="assets/img/' + PHOTOS.certificate + '.webp"><img class="letter-img" src="assets/img/' + PHOTOS.certificate + '.jpg" width="1600" height="1151" alt="' + esc(r.alt) + '"></picture>';
       modal.querySelector('.modal-close').addEventListener('click', function () { modal.close(); });
       if (typeof modal.showModal === 'function') modal.showModal(); else modal.setAttribute('open', '');
       document.body.classList.add('modal-open');
