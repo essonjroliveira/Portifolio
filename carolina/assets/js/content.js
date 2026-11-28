@@ -135,11 +135,33 @@ window.CONTENT = {
 
   reviews: {
     title: 'O que dizem os alunos',
-    lead: 'Avaliações de alunos na Superprof, onde tenho nota máxima e o selo de Embaixadora.',
+    lead: 'Avaliações reais de alunos na Superprof, todas com nota máxima.',
+    score: '5,0',
+    scoreText: 'Nota máxima em todas as avaliações na Superprof',
     badgeTitle: 'Embaixadora Superprof',
     badgeText: 'Selo que a Superprof dá aos melhores professores da plataforma: perfil de qualidade, diploma verificado e resposta garantida.',
-    stars: 'Nota 5 de 5',
-    placeholder: 'Espaço reservado para as avaliações dos alunos',
+    more: 'Ver mais avaliações',
+    less: 'Ver menos avaliações',
+    // as 6 primeiras ficam sempre visíveis; as demais aparecem em "Ver mais avaliações"
+    items: [
+      { name: 'Edsonjr', topic: 'Excel, Power BI, SQL e Python', text: 'Super recomendo a Carolina para quem quer aprender Excel, Power Query, Power BI, SQL e Python. Ela adapta as aulas às necessidades de cada aluno. No meu caso, como engenheiro, ela preparou materiais com indicadores e exemplos que fazem parte da minha rotina. Isso facilitou muito a aplicação do que aprendi no trabalho.' },
+      { name: 'Jeniffer', topic: 'Análise de dados', text: 'As aulas me ajudaram não só a desenvolver novas habilidades, mas também a ganhar mais confiança para trabalhar com dados, análises e ferramentas que antes pareciam muito distantes da minha capacidade. Recomendo muito para quem quer aprender de forma prática. Foi um ótimo investimento!' },
+      { name: 'Priscilla', topic: 'Excel e VBA', text: 'Me ajudou a montar e automatizar um controle de vendas e estoque. Sanou todas as minhas dúvidas com muita clareza! Demonstrou ter bastante conhecimento de Excel e VBA. Estou muito grata por todo aprendizado!' },
+      { name: 'Jaqueline', topic: 'Excel avançado e VBA', text: 'Carolina é uma excelente professora. Tenho aprendido muito com ela, especialmente em VBA e Excel avançado, e pretendo continuar meus estudos em Power BI. A experiência tem sido muito positiva e enriquecedora. Recomendo fortemente o trabalho dela.' },
+      { name: 'Paula Regina', topic: 'Excel no trabalho', text: 'As aulas foram muito bem estruturadas, com explicações claras, exemplos práticos e espaço para esclarecer dúvidas, o que tornou o aprendizado muito mais fácil. Com certeza saio do curso mais confiante para aplicar os conhecimentos no dia a dia de trabalho.' },
+      { name: 'Rafaela', topic: 'Excel', text: 'A didática é extremamente clara, objetiva e bem estruturada, o que facilitou muito o meu aprendizado. Durante a aula, me senti segura para acompanhar o conteúdo e também para praticar. Com certeza recomendo para quem busca aprender Excel com confiança e qualidade!' },
+      { name: 'Therezinha Aparecida', topic: 'Python', text: 'Agradeço a Carol pela atenção e apoio nessa jornada com Python! Ela é uma pessoa muito atenciosa e dedicada a ajudar! Super recomendo suas aulas!' },
+      { name: 'Fernando Luiz', topic: 'Excel', text: 'Estou em aulas de Excel e posso dizer que a Carolina é uma excelente professora, conhece muito do assunto, tem ideias e uma didática com simpatia que facilita o aprendizado. Está me ajudando bastante a melhorar meu dia a dia no trabalho.' },
+      { name: 'Gabriela', topic: 'Excel', text: 'Explica o Excel de forma clara, prática e paciente, tornando até os conteúdos mais difíceis fáceis de entender. Suas aulas são organizadas e muito úteis no dia a dia. Recomendo muito!' },
+      { name: 'Diego', topic: 'Aulas práticas', text: 'Carol é uma das melhores professoras. Aulas didáticas, super práticas e muito fáceis de aplicar. Sem dúvida a melhor escolha.' },
+      { name: 'Diego', topic: 'Primeira aula', text: 'Melhor escolha impossível. Fiquei bem desconfiado no primeiro momento com a ferramenta e com a seleção do professor. Eu acertei de cara. Carol é muito atenciosa, tem paciência e domina muito a ferramenta.' },
+      { name: 'Amábilly', topic: 'Excel', text: 'A Carol é uma excelente professora! Muito paciente ao ensinar, respeita o ritmo de aprendizado e tem uma didática leve e ótima dinâmica. Recomendo muito para quem quer aprender Excel, inclusive, já estou indicando para alguns amigos.' },
+      { name: 'Carmem', topic: 'Excel', text: 'Carol é excelente! Super atenciosa, sabe muito da ferramenta. Está me ajudando demais! Podem confiar que ela entrega com muita excelência. Além disso, é de extrema educação.' },
+      { name: 'Rosmary', topic: 'Excel', text: 'A Carol é excelente! Muito paciente, explica de forma clara e torna o aprendizado de Excel fácil e dinâmico. Recomendo muito!' },
+      { name: 'Jéssica', topic: 'Planejamento', text: 'Ela é incrível, sempre muito disposta, flexível e parceira. Sem dúvida, foi a melhor teacher que eu poderia encontrar por aqui. Escuta pacientemente todas as minhas loucuras e me ajuda a transformá-las em planos reais.' },
+      { name: 'Vitoria', topic: 'Aulas particulares', text: 'Carolina é uma ótima professora, sabe ensinar, tem paciência e procura sempre ajudar o aluno no que ele busca. Gostei muito de ter aulas com ela, me ajudou muito!' },
+      { name: 'Soraya', topic: 'Aulas particulares', text: 'Super paciente, método prático.' },
+    ],
   },
 
   price: {

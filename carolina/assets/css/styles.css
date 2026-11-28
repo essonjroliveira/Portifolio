@@ -504,20 +504,29 @@ svg { width: 18px; height: 18px; flex: 0 0 auto; fill: none; stroke: currentColo
 .project.flip .project-media { order: 2; }
 .project .ai-box small svg { width: 15px; height: 15px; }
 
-/* avaliações */
-.reviews-top { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 18px 22px; align-items: center; padding: 22px 24px; }
+/* avaliações: nota em destaque primeiro, depois o selo; 6 visíveis e o resto em "ver mais" */
+.reviews-top { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 20px 32px; align-items: center; padding: 26px 28px; }
+.score { display: grid; justify-items: start; gap: 4px; padding-right: 32px; border-right: 1px solid var(--line-2); }
+.score-stars .stars svg.star { width: 26px; height: 26px; }
+.score b { font: 700 52px/1 var(--display); letter-spacing: -.03em; color: var(--ink); font-variant-numeric: tabular-nums; }
+.score > span:last-child { font-size: 14px; font-weight: 600; color: var(--ink-2); max-width: 22ch; line-height: 1.4; }
+.badge { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 16px; align-items: center; }
 .badge-mark { width: 52px; height: 52px; border-radius: 14px; display: grid; place-items: center; background: var(--navy-2); color: var(--accent); }
 .badge-mark svg { width: 26px; height: 26px; }
-.reviews-top b { color: var(--ink); font-size: 17px; }
-.reviews-top p { color: var(--ink-2); font-size: 15px; margin-top: 2px; }
-.rating { display: grid; justify-items: end; gap: 4px; }
-.rating .stars svg.star { width: 20px; height: 20px; }
-.rating > span:not(.stars) { font-size: 13.5px; font-weight: 600; color: var(--ink-2); }
-.review-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 16px; }
-.review { padding: 22px; display: grid; gap: 12px; align-content: start; min-height: 150px; }
-.review.is-ph { border-style: dashed; box-shadow: none; background: transparent; }
-.review.is-ph .stars { opacity: .45; }
-.review.is-ph p { color: var(--muted); font-size: 14.5px; }
+.badge b { color: var(--ink); font-size: 17px; }
+.badge p { color: var(--ink-2); font-size: 15px; margin-top: 2px; }
+.review-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin: 16px 0 0; }
+.review { margin: 0; padding: 22px 22px 24px; display: grid; gap: 14px; align-content: start; transition: transform .2s, box-shadow .2s; }
+.review:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+.review-head { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 12px; align-items: center; }
+.avatar { width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; background: var(--navy-2); color: var(--accent); font: 700 16px/1 var(--display); }
+.review figcaption b { display: block; color: var(--ink); font-size: 15.5px; line-height: 1.3; }
+.review figcaption small { display: block; color: var(--accent-text); font-size: 12.5px; font-weight: 600; line-height: 1.35; }
+.review-stars .stars svg.star { width: 14px; height: 14px; }
+.review blockquote { margin: 0; color: var(--ink-2); font-size: 15px; line-height: 1.6; }
+.review blockquote::before { content: "“"; color: var(--accent); font: 700 22px/0 var(--display); margin-right: 2px; vertical-align: -4px; }
+.review blockquote::after { content: "”"; color: var(--accent); font-weight: 700; }
+.review-grid.open .extra { animation: fade .35s ease both; }
 
 /* valores */
 .price { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); overflow: hidden; }
@@ -546,14 +555,15 @@ svg { width: 18px; height: 18px; flex: 0 0 auto; fill: none; stroke: currentColo
   /* no celular os selos ficam abaixo da foto, para não cobrir o rosto */
   .photo-tags { position: static; display: flex; flex-wrap: wrap; gap: 8px; margin-top: 34px; max-width: 340px; }
   .photo-tags .photo-tag { padding: 7px 12px; font-size: 13.5px; }
-  .audience-grid, .review-grid { grid-template-columns: minmax(0, 1fr); }
+  .audience-grid { grid-template-columns: minmax(0, 1fr); }
+  .review-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .project.flip .project-media { order: 0; }
   .price { grid-template-columns: minmax(0, 1fr); }
-  .reviews-top { grid-template-columns: auto minmax(0, 1fr); }
-  .rating { grid-column: 1 / -1; justify-items: start; }
+  .reviews-top { grid-template-columns: minmax(0, 1fr); }
+  .score { padding: 0 0 20px; border-right: 0; border-bottom: 1px solid var(--line-2); }
 }
 @media (max-width: 640px) {
-  .lesson-grid { grid-template-columns: minmax(0, 1fr); }
+  .lesson-grid, .review-grid { grid-template-columns: minmax(0, 1fr); }
 }
 @media (max-width: 520px) {
   .price-main, .price-list { padding: 26px 22px; }

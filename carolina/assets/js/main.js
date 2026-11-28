@@ -30,6 +30,7 @@
     check: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>',
     gift: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="9" width="16" height="11" rx="1.5"/><path d="M3.5 9h17M12 9v11M12 9c-1.5-3.5-5.5-4-5.5-1.5S10 9 12 9Zm0 0c1.5-3.5 5.5-4 5.5-1.5S14 9 12 9Z"/></svg>',
     spark: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5 13.9 9l5.6 1.9-5.6 1.9L12 18.5l-1.9-5.7L4.5 11l5.6-2Z"/><path d="M18.5 3v3M17 4.5h3"/></svg>',
+    chevron: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>',
     star: '<svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3.6 2.6 5.3 5.8.8-4.2 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.2-4.1 5.8-.8Z"/></svg>',
     bulb: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.7.5 1.1 1.3 1.1 2.2h5c0-.9.4-1.7 1.1-2.2A6 6 0 0 0 12 3Z"/></svg>',
   };
@@ -185,17 +186,25 @@
     '</div></section>';
   }
 
+  function reviewCard(x, extra) {
+    return '<figure class="card review' + (extra ? ' extra' : '') + '">' +
+      '<div class="review-head"><span class="avatar" aria-hidden="true">' + esc(x.name.charAt(0)) + '</span>' +
+        '<figcaption><b>' + esc(x.name) + '</b><small>' + esc(x.topic) + '</small></figcaption>' +
+        '<span class="review-stars" aria-label="5 estrelas">' + stars(5) + '</span></div>' +
+      '<blockquote>' + esc(x.text) + '</blockquote></figure>';
+  }
+
   function reviews() {
-    var R = c.reviews;
+    var R = c.reviews, VIS = 6, hidden = R.items.length - VIS;
     return '<section id="avaliacoes" class="section" aria-labelledby="t-aval"><div class="wrap reveal">' +
       sectionHead('06', R.title, R.lead, 't-aval') +
-      '<div class="reviews-top card"><div class="badge-mark" aria-hidden="true">' + I.spark + '</div>' +
-        '<div><b>' + esc(R.badgeTitle) + '</b><p>' + esc(R.badgeText) + '</p></div>' +
-        '<div class="rating">' + stars(5) + '<span>' + esc(R.stars) + '</span></div>' +
+      '<div class="reviews-top card">' +
+        '<div class="score"><span class="score-stars">' + stars(5) + '</span><b>' + esc(R.score) + '</b><span>' + esc(R.scoreText) + '</span></div>' +
+        '<div class="badge"><div class="badge-mark" aria-hidden="true">' + I.spark + '</div>' +
+          '<div><b>' + esc(R.badgeTitle) + '</b><p>' + esc(R.badgeText) + '</p></div></div>' +
       '</div>' +
-      '<div class="review-grid">' + [0, 1, 2].map(function () {
-        return '<div class="card review is-ph">' + stars(5) + '<p>' + esc(R.placeholder) + '</p></div>';
-      }).join('') + '</div>' +
+      '<div class="review-grid collapsible always">' + R.items.map(function (x, i) { return reviewCard(x, i >= VIS); }).join('') + '</div>' +
+      (hidden > 0 ? '<button type="button" class="btn more-btn always" aria-expanded="false" data-more="' + hidden + '"><span>' + esc(R.more) + ' (' + hidden + ')</span>' + I.chevron + '</button>' : '') +
     '</div></section>';
   }
 
@@ -252,6 +261,18 @@
       theme = b.dataset.themePref; applyTheme();
       try { localStorage.setItem(THEME_KEY, theme); } catch (e) { /* ignora */ }
       app.querySelectorAll('[data-theme-pref]').forEach(function (x) { x.setAttribute('aria-pressed', String(x.dataset.themePref === theme)); });
+    });
+  });
+
+  // "Ver mais avaliações"
+  app.querySelectorAll('[data-more]').forEach(function (btn) {
+    var box = btn.previousElementSibling, label = btn.querySelector('span'), n = btn.dataset.more;
+    btn.addEventListener('click', function () {
+      var open = !box.classList.contains('open');
+      box.classList.toggle('open', open); btn.classList.toggle('open', open);
+      btn.setAttribute('aria-expanded', String(open));
+      label.textContent = open ? c.reviews.less : c.reviews.more + ' (' + n + ')';
+      if (!open) btn.closest('section').scrollIntoView({ block: 'start' });
     });
   });
 
